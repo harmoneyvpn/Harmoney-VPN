@@ -4,11 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#071713">
-  <meta name="description" content="Harmoney Pro؛ مدیریت اشتراک‌ها و پروفایل‌های VPN در یک اپ. دانلود نسخه‌های رسمی، راهنمای خرید و پشتیبانی تلگرام.">
-  <meta property="og:title" content="Harmoney Pro — اتصال، ساده‌تر">
-  <meta property="og:description" content="نسخهٔ مناسب دستگاهت را پیدا کن، از ربات رسمی اشتراک بگیر و شروع کن.">
+  <meta name="description" content="دانلود رسمی Harmoney VPN برای اندروید؛ نسخه‌های Harmoney Free و Harmoney Pro با APK مناسب ARM64، ARMv7، x86_64 و Universal.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://harmoneyvpn.github.io/Harmoney-VPN/">
+  <link rel="sitemap" type="application/xml" href="https://harmoneyvpn.github.io/Harmoney-VPN/sitemap.xml">
+  <link rel="icon" type="image/png" href="assets/harmoney-icon.png">
+  <meta property="og:title" content="Harmoney VPN | دانلود رسمی Free و Pro برای اندروید">
+  <meta property="og:description" content="نسخهٔ رایگان یا حرفه‌ای Harmoney را انتخاب کن و فایل APK مناسب دستگاه اندرویدی‌ات را مستقیم دریافت کن.">
   <meta property="og:type" content="website">
-  <title>Harmoney Pro | دانلود رسمی</title>
+  <meta property="og:url" content="https://harmoneyvpn.github.io/Harmoney-VPN/">
+  <meta property="og:image" content="https://harmoneyvpn.github.io/Harmoney-VPN/assets/harmoney-icon.png">
+  <meta property="og:image:alt" content="نشان Harmoney VPN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Harmoney VPN | دانلود رسمی اندروید">
+  <meta name="twitter:description" content="دانلود Harmoney Free و Pro برای Android؛ انتخاب APK بر اساس معماری دستگاه.">
+  <title>دانلود Harmoney VPN برای اندروید | نسخه Free و Pro</title>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Harmoney VPN",
+    "url":"https://harmoneyvpn.github.io/Harmoney-VPN/",
+    "inLanguage":["fa-IR","en"],
+    "description":"صفحهٔ رسمی دانلود Harmoney Free و Harmoney Pro برای Android.",
+    "publisher":{"@type":"Organization","name":"Harmoney VPN","url":"https://github.com/harmoneyvpn"}
+  }
+  </script>
   <style>
 :root {
   color-scheme:dark;
@@ -629,6 +650,186 @@ h1 {
 .release-meta a {
   color:var(--mint2)
 }
+.edition-stack {
+  display:grid;
+  gap:22px
+}
+.edition-panel {
+  position:relative;
+  overflow:hidden;
+  padding:clamp(20px,3.5vw,32px);
+  border:1px solid #4c7060;
+  border-radius:28px;
+  background:radial-gradient(ellipse at 100% 0%,#35d9a11c,transparent 48%),linear-gradient(135deg,#112b23,#0b1b18);
+  box-shadow:0 20px 55px #0002
+}
+.edition-panel.pro {
+  border-color:#6c5795;
+  background:radial-gradient(ellipse at 100% 0%,#a47aff30,transparent 50%),radial-gradient(ellipse at 0% 100%,#32dcba13,transparent 45%),linear-gradient(135deg,#171d35,#101a20)
+}
+.edition-panel.free {
+  border-color:#397d72;
+  background:radial-gradient(ellipse at 100% 0%,#63f0bd23,transparent 50%),linear-gradient(135deg,#10352d,#102321)
+}
+.edition-head {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:20px
+}
+.edition-head h3 {
+  margin:0 0 5px;
+  font-size:clamp(1.35rem,3vw,1.8rem)
+}
+.edition-head p {
+  max-width:650px;
+  margin:0;
+  color:#b8cabe
+}
+.edition-mark {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:10px;
+  padding:5px 11px;
+  border:1px solid #65f0bd55;
+  border-radius:99px;
+  color:#baffdf;
+  background:#65f0bd12;
+  font-size:.78rem;
+  font-weight:800
+}
+.pro .edition-mark {
+  color:#dfd2ff;
+  border-color:#b69aff70;
+  background:#b69aff15
+}
+.edition-version {
+  flex:none;
+  padding:8px 12px;
+  border:1px solid #ffffff20;
+  border-radius:13px;
+  color:#f3edff;
+  background:#ffffff0b;
+  font-size:.86rem;
+  font-weight:800
+}
+.abi-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px
+}
+.abi-card {
+  min-width:0;
+  padding:16px;
+  border:1px solid #ffffff19;
+  border-radius:19px;
+  background:linear-gradient(145deg,#ffffff0d,#ffffff04)
+}
+.abi-symbol {
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  margin-bottom:12px;
+  border-radius:12px;
+  color:#08251a;
+  background:linear-gradient(135deg,#baffdf,#65f0bd);
+  font-weight:950
+}
+.pro .abi-symbol {
+  color:#21123d;
+  background:linear-gradient(135deg,#e6d9ff,#a989ff)
+}
+.pro .abi-card .download-link {
+  border-color:#b69aff77;
+  color:#21123d;
+  background:linear-gradient(135deg,#e6d9ff,#b69aff)
+}
+.abi-card h4 {
+  margin:0 0 4px;
+  font-size:1rem
+}
+.abi-card p {
+  min-height:42px;
+  margin:0 0 13px;
+  color:#a9bdb2;
+  font-size:.78rem
+}
+.abi-card .download-link {
+  min-height:40px;
+  padding:7px 9px;
+  text-align:center;
+  font-size:.8rem
+}
+.edition-meta {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin-top:15px;
+  color:#a8bcb0;
+  font-size:.8rem
+}
+.edition-meta a {
+  color:#c9b5ff
+}
+.free .edition-meta a {
+  color:#9af3d0
+}
+.android-tip {
+  margin:14px 0 0;
+  color:#afc3b8;
+  font-size:.83rem
+}
+.soon-section {
+  margin-top:24px;
+  padding:22px;
+  border:1px dashed #597064;
+  border-radius:23px;
+  background:linear-gradient(120deg,#17251f,#161b2b)
+}
+.soon-section h3 {
+  margin:0 0 5px;
+  font-size:1.15rem
+}
+.soon-section>p {
+  margin:0 0 16px;
+  color:#aebfb4
+}
+.soon-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px
+}
+.soon-card {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:13px 15px;
+  border:1px solid #ffffff17;
+  border-radius:15px;
+  background:#ffffff08
+}
+.soon-card strong {
+  font-size:.95rem
+}
+.soon-badge {
+  padding:4px 9px;
+  border-radius:99px;
+  color:#292043;
+  background:#d5c3ff;
+  font-size:.7rem;
+  font-weight:900;
+  white-space:nowrap
+}
+.download-note {
+  margin:14px 0 0;
+  color:#92aa9c;
+  font-size:.79rem
+}
 .free-banner {
   display:flex;
   align-items:center;
@@ -740,6 +941,9 @@ h1 {
   .downloads {
     grid-template-columns:1fr 1fr
   }
+  .abi-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
   .app-card {
     width:260px
   }
@@ -757,11 +961,23 @@ h1 {
   .wrap {
     width:min(100% - 28px,1160px)
   }
-  nav {
-    display:none
-  }
   .topbar {
+    flex-wrap:wrap;
     padding:15px 0
+  }
+  nav {
+    order:3;
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    gap:18px;
+    overflow-x:auto;
+    padding:2px 0 7px;
+    white-space:nowrap;
+    scrollbar-width:none
+  }
+  nav::-webkit-scrollbar {
+    display:none
   }
   .nav-actions>.btn {
     display:none
@@ -826,6 +1042,9 @@ h1 {
     align-items:flex-start;
     flex-direction:column
   }
+  .edition-head {
+    flex-direction:column
+  }
 }
 @media(max-width:480px) {
   .features,.downloads {
@@ -836,6 +1055,22 @@ h1 {
   }
   .download-card {
     min-height:190px
+  }
+  .edition-panel {
+    padding:18px 14px;
+    border-radius:22px
+  }
+  .abi-grid {
+    gap:8px
+  }
+  .abi-card {
+    padding:12px 10px
+  }
+  .abi-card p {
+    min-height:50px
+  }
+  .soon-grid {
+    grid-template-columns:1fr
   }
   .hero-actions .btn {
     flex:1 1 100%
@@ -879,9 +1114,9 @@ h1 {
 </head>
 <body>
   <header class="wrap topbar">
-    <a class="brand" href="#home" aria-label="Harmoney Pro">
+    <a class="brand" href="#home" aria-label="Harmoney VPN">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h4.2l2-5 3.5 10 2.1-5H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.2" opacity=".55"/></svg></span>
-      <span>Harmoney <b>Pro</b></span>
+      <span>Harmoney <b>VPN</b></span>
     </a>
     <nav aria-label="ناوبری اصلی"><a href="#features" data-t="navFeatures">ویژگی‌ها</a><a href="#how" data-t="navHow">شروع کار</a><a href="#downloads" data-t="navDownload">دانلود</a><a href="#faq" data-t="navFaq">پرسش‌ها</a></nav>
     <div class="nav-actions"><label class="sr-only" for="language">زبان</label><select class="lang" id="language" aria-label="زبان"><option value="fa">فارسی</option><option value="en">English</option></select><a class="btn btn-primary" href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer"><span data-t="buyTop">خرید اشتراک</span><span aria-hidden="true">↗</span></a></div>
@@ -892,14 +1127,14 @@ h1 {
       <div class="hero-copy">
         <div class="eyebrow"><span class="live-dot"></span><span data-t="eyebrow">یک تجربهٔ جمع‌وجور برای اتصال‌های تو</span></div>
         <h1 id="hero-title" data-t-html="headline">اتصال‌هات را<br><span class="shine">یک‌جا مدیریت کن.</span></h1>
-        <p class="lead" data-t="lead">Harmoney Pro برای مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN در یک اپ ساخته شده؛ نسخهٔ دستگاهت را بگیر و از ربات رسمی برای خرید یا تمدید راهنمایی بگیر.</p>
+        <p class="lead" data-t="lead">Harmoney Free یا Pro را برای مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN انتخاب کن؛ نسخهٔ اندروید مناسب دستگاهت را از انتشار رسمی بگیر.</p>
         <div class="hero-actions"><a class="btn btn-primary" href="#downloads"><span data-t="downloadCta">دریافت Harmoney Pro</span><span aria-hidden="true">↓</span></a><a class="btn btn-quiet" href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.7 4.4 18.5 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.5 1.2 12c-1-.3-1-1 .2-1.5l18.8-7.2c.9-.3 1.7.2 1.5 1.1Z"/></svg><span data-t="botCta">ورود به ربات تلگرام</span></a></div>
         <div class="micro"><span><b class="check">✓</b><span data-t="micro1">خروجی‌های رسمی و مستقیم</span></span><span><b class="check">✓</b><span data-t="micro2">خرید و تمدید از ربات</span></span></div>
       </div>
       <div class="art" aria-label="تصویر تزئینی Harmoney Pro">
         <div class="orbit"></div><div class="halo"></div>
         <div class="app-card"><div class="app-card-top"><span>HARMONEY / PRO</span><span class="status-pill"><i class="live-dot"></i><span data-t="demoStatus">آمادهٔ شروع</span></span></div><h2 data-t="demoTitle">اتصال امن، ساده</h2><p data-t="demoSubtitle">پروفایل‌ها و اشتراک‌ها در کنار هم</p><div class="dial"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 5 51 12v15c0 13.5-7.9 24.7-19 31C20.9 51.7 13 40.5 13 27V12L32 5Z" stroke="currentColor" stroke-width="3"/><path d="M22 32.5 28.5 39 42 24" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="app-card-foot"><span data-t="demoFootLeft">Harmoney Pro</span><span>✦ <span data-t="demoFootRight">آمادهٔ اتصال</span></span></div></div>
-        <div class="sticker s-one"><span>🛡️</span><span data-t="stickerOne">پرو، برای مسیر تو</span></div><div class="sticker s-two"><span>✨</span><span data-t="stickerTwo">همه‌چیز مرتب</span></div><div class="sticker s-three"><span>📲</span><span data-t="stickerThree">چند پلتفرم</span></div>
+        <div class="sticker s-one"><span>🛡️</span><span data-t="stickerOne">پرو، برای مسیر تو</span></div><div class="sticker s-two"><span>✨</span><span data-t="stickerTwo">همه‌چیز مرتب</span></div><div class="sticker s-three"><span>📲</span><span data-t="stickerThree">چهار نسخهٔ اندروید</span></div>
       </div>
     </section>
 
@@ -908,7 +1143,7 @@ h1 {
       <div class="features">
         <article class="feature"><span class="feature-icon">🧭</span><h3 data-t="feature1Title">اشتراک‌ها در یک‌جا</h3><p data-t="feature1Text">اشتراک‌ها و پروفایل‌های سازگار را در برنامه اضافه و مدیریت کن؛ فایل‌های متداول مثل ‎.conf، ‎.ovpn، ‎.json و YAML پشتیبانی می‌شوند.</p></article>
         <article class="feature"><span class="feature-icon">🪄</span><h3 data-t="feature2Title">انتخاب پروفایل دلخواه</h3><p data-t="feature2Text">پروفایل یا سرویس موردنظرت را از داخل برنامه انتخاب کن و وضعیت اتصال را همان‌جا ببین.</p></article>
-        <article class="feature"><span class="feature-icon">💻</span><h3 data-t="feature3Title">برای دستگاه‌های مختلف</h3><p data-t="feature3Text">نسخه‌های منتشرشده برای Android، Windows، Linux و macOS از همین صفحه شناسایی و نمایش داده می‌شوند.</p></article>
+        <article class="feature"><span class="feature-icon">📱</span><h3 data-t="feature3Title">برای معماری‌های مختلف اندروید</h3><p data-t="feature3Text">برای هر نسخه چهار فایل APK داریم: ARM64، ARMv7، x86_64 و Universal. نسخه‌های دیگر دستگاه‌ها به‌زودی اضافه می‌شوند.</p></article>
       </div>
     </section>
 
@@ -931,18 +1166,43 @@ h1 {
     <section class="section" aria-labelledby="bot-title"><div class="bot-panel"><div><span class="bot-tag" data-t="botTag">ربات رسمی هارمونی</span><h2 id="bot-title" data-t="botTitle">خرید، تمدید و پیگیری اشتراک از تلگرام</h2><p data-t="botText">برای دیدن پلن‌ها و مبلغ روز، خرید یا تمدید را از ربات انجام بده. وضعیت اشتراک و پرداخت‌ها هم از همان گفت‌وگو قابل پیگیری است. ربات برای ورود به حساب، رمز عبور Harmoney را از تو نمی‌خواهد.</p></div><a class="btn btn-primary" href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.7 4.4 18.5 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.5 1.2 12c-1-.3-1-1 .2-1.5l18.8-7.2c.9-.3 1.7.2 1.5 1.1Z"/></svg><span data-t="openBot">باز کردن ربات</span><span aria-hidden="true">↗</span></a></div></section>
 
     <section class="section" id="downloads">
-      <div class="section-head"><div><p class="kicker" data-t="downloadKicker">دریافت نسخه</p><h2 data-t="downloadTitle">نسخهٔ دستگاهت را انتخاب کن</h2></div><p id="release-status" aria-live="polite" data-t="loading">در حال بررسی تازه‌ترین نسخهٔ Pro…</p></div>
-      <div class="downloads">
-        <article class="download-card" data-platform="android"><div class="download-top"><span class="os-icon">A</span><span class="os-tag" data-t="androidTag">موبایل و تبلت</span></div><h3>Android</h3><p data-t="androidText">فایل نصب APK برای دستگاه‌های Android.</p><a class="download-link disabled" href="#" aria-disabled="true"><span data-t="loadingShort">در حال بررسی…</span></a></article>
-        <article class="download-card" data-platform="windows"><div class="download-top"><span class="os-icon">⊞</span><span class="os-tag" data-t="desktopTag">رایانه</span></div><h3>Windows</h3><p data-t="windowsText">نصاب رسمی Windows، در صورت انتشار.</p><a class="download-link disabled" href="#" aria-disabled="true"><span data-t="loadingShort">در حال بررسی…</span></a></article>
-        <article class="download-card" data-platform="linux"><div class="download-top"><span class="os-icon">🐧</span><span class="os-tag" data-t="desktopTag">رایانه</span></div><h3>Linux</h3><p data-t="linuxText">بستهٔ ‎.deb یا آرشیو Linux، در صورت انتشار.</p><a class="download-link disabled" href="#" aria-disabled="true"><span data-t="loadingShort">در حال بررسی…</span></a></article>
-        <article class="download-card" data-platform="macos"><div class="download-top"><span class="os-icon">⌘</span><span class="os-tag" data-t="desktopTag">رایانه</span></div><h3>macOS</h3><p data-t="macText">نسخهٔ macOS، در صورت انتشار.</p><a class="download-link disabled" href="#" aria-disabled="true"><span data-t="loadingShort">در حال بررسی…</span></a></article>
+      <div class="section-head"><div><p class="kicker" data-t="downloadKicker">دانلود Harmoney برای اندروید</p><h2 data-t="downloadTitle">نسخهٔ Free یا Pro را انتخاب کن</h2></div><p id="release-status" aria-live="polite" data-t="androidIntro">برای هر نسخه، فایل APK مناسب معماری گوشی یا تبلت اندرویدی‌ات را بردار.</p></div>
+      <div class="edition-stack">
+        <article class="edition-panel pro" aria-labelledby="pro-download-title">
+          <div class="edition-head">
+            <div><span class="edition-mark" data-t="proEditionTag">✨ نسخهٔ حرفه‌ای</span><h3 id="pro-download-title">Harmoney Pro</h3><p data-t="proEditionText">مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN؛ برای خرید یا تمدید اشتراک، ربات رسمی را ببین.</p></div>
+            <span class="edition-version"><span data-t="versionLabel">نسخه</span> <b id="pro-version">1.0.0</b></span>
+          </div>
+          <div class="abi-grid">
+            <article class="abi-card"><span class="abi-symbol">64</span><h4>ARM64</h4><p data-t="arm64Text">گوشی‌ها و تبلت‌های جدید ۶۴ بیتی</p><a id="pro-arm64" data-edition="pro" data-abi="arm64" data-abi-label="ARM64" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/pro-v1.0.0/HarmoneyPro-Android-arm64-v8a.apk" download data-t="downloadApk">دانلود APK</a></article>
+            <article class="abi-card"><span class="abi-symbol">32</span><h4>ARMv7</h4><p data-t="armv7Text">دستگاه‌های قدیمی‌تر ۳۲ بیتی</p><a id="pro-armv7" data-edition="pro" data-abi="armv7" data-abi-label="ARMv7" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/pro-v1.0.0/HarmoneyPro-Android-armeabi-v7a.apk" download data-t="downloadApk">دانلود APK</a></article>
+            <article class="abi-card"><span class="abi-symbol">x64</span><h4>x86_64</h4><p data-t="x64Text">تبلت‌ها و دستگاه‌های اندرویدی x86_64</p><a id="pro-x64" data-edition="pro" data-abi="x64" data-abi-label="x86_64" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/pro-v1.0.0/HarmoneyPro-Android-x86_64.apk" download data-t="downloadApk">دانلود APK</a></article>
+            <article class="abi-card"><span class="abi-symbol">✦</span><h4 data-t="universalTitle">Universal</h4><p data-t="universalText">انتخاب پیشنهادی اگر معماری دستگاهت را نمی‌دانی</p><a id="pro-universal" data-edition="pro" data-abi="universal" data-abi-label="Universal" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/pro-v1.0.0/HarmoneyPro-Android-universal.apk" download data-t="downloadApk">دانلود APK</a></article>
+          </div>
+          <div class="edition-meta"><span data-t="releaseLabel">نسخهٔ منتشرشده:</span> <strong id="pro-release-name">Harmoney Pro 1.0.0</strong><span aria-hidden="true">·</span><a id="pro-release-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/tag/pro-v1.0.0" target="_blank" rel="noopener noreferrer" data-t="releaseDetails">جزئیات نسخه و همهٔ فایل‌ها</a></div>
+        </article>
+
+        <article class="edition-panel free" aria-labelledby="free-download-title">
+          <div class="edition-head">
+            <div><span class="edition-mark" data-t="freeEditionTag">🟢 نسخهٔ رایگان</span><h3 id="free-download-title">Harmoney Free</h3><p data-t="freeEditionText">نسخهٔ رایگان هارمونی؛ فایل سازگار با معماری اندرویدت را مستقیم بگیر.</p></div>
+            <span class="edition-version"><span data-t="versionLabel">نسخه</span> <b id="free-version">0.1.1</b></span>
+          </div>
+          <div class="abi-grid">
+            <article class="abi-card"><span class="abi-symbol">64</span><h4>ARM64</h4><p data-t="arm64Text">گوشی‌ها و تبلت‌های جدید ۶۴ بیتی</p><a id="free-arm64" data-edition="free" data-abi="arm64" data-abi-label="ARM64" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/v0.1.1/HarmoneyFree-Android-arm64-v8a.apk" download data-t="downloadApk">دانلود APK</a></article>
+            <article class="abi-card"><span class="abi-symbol">32</span><h4>ARMv7</h4><p data-t="armv7Text">دستگاه‌های قدیمی‌تر ۳۲ بیتی</p><a id="free-armv7" data-edition="free" data-abi="armv7" data-abi-label="ARMv7" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/v0.1.1/HarmoneyFree-Android-armeabi-v7a.apk" download data-t="downloadApk">دانلود APK</a></article>
+            <article class="abi-card"><span class="abi-symbol">x64</span><h4>x86_64</h4><p data-t="x64Text">تبلت‌ها و دستگاه‌های اندرویدی x86_64</p><a id="free-x64" data-edition="free" data-abi="x64" data-abi-label="x86_64" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/v0.1.1/HarmoneyFree-Android-x86_64.apk" download data-t="downloadApk">دانلود APK</a></article>
+            <article class="abi-card"><span class="abi-symbol">✦</span><h4 data-t="universalTitle">Universal</h4><p data-t="universalText">انتخاب پیشنهادی اگر معماری دستگاهت را نمی‌دانی</p><a id="free-universal" data-edition="free" data-abi="universal" data-abi-label="Universal" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/v0.1.1/HarmoneyFree-Android-universal.apk" download data-t="downloadApk">دانلود APK</a></article>
+          </div>
+          <div class="edition-meta"><span data-t="releaseLabel">نسخهٔ منتشرشده:</span> <strong id="free-release-name">Harmoney Free 0.1.1</strong><span aria-hidden="true">·</span><a id="free-release-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/tag/v0.1.1" target="_blank" rel="noopener noreferrer" data-t="releaseDetails">جزئیات نسخه و همهٔ فایل‌ها</a></div>
+        </article>
       </div>
-      <div class="release-meta"><span data-t="releaseLabel">نسخهٔ فعلی:</span> <strong id="release-version">—</strong><span aria-hidden="true">·</span><a id="checksums-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases" target="_blank" rel="noopener noreferrer" data-t="allReleases">همهٔ فایل‌ها و هش‌ها</a><span id="published-at"></span></div>
-      <div class="free-banner"><p><strong data-t="freeTitle">دنبال نسخهٔ رایگان هستی؟</strong> <span data-t="freeText">نسخهٔ Harmoney Free را از صفحهٔ انتشارهای رسمی بگیر.</span></p><a href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/latest" target="_blank" rel="noopener noreferrer"><span data-t="freeCta">دریافت Harmoney Free</span> ↗</a></div>
+      <p class="android-tip" data-t="androidTip">نمی‌دانی کدام فایل مناسب است؟ نسخهٔ Universal را انتخاب کن. برای نصب، فایل APK را باز و اجازهٔ نصب از این منبع را در تنظیمات اندروید فعال کن.</p>
+      <div class="soon-section"><h3 data-t="soonTitle">نسخه‌های دستگاه‌های دیگر هم در راه‌اند</h3><p data-t="soonText">فعلاً دانلود مستقیم این صفحه برای اندروید است؛ نسخه‌های بیشتر به‌زودی اضافه می‌شوند.</p><div class="soon-grid"><div class="soon-card"><strong>Windows</strong><span class="soon-badge" data-t="comingSoon">به‌زودی</span></div><div class="soon-card"><strong>Linux</strong><span class="soon-badge" data-t="comingSoon">به‌زودی</span></div><div class="soon-card"><strong>macOS</strong><span class="soon-badge" data-t="comingSoon">به‌زودی</span></div></div></div>
+      <p class="download-note" data-t="officialNote">فایل‌ها از انتشارهای رسمی Harmoney در GitHub دریافت می‌شوند. نسخه و نام فایل را پیش از نصب بررسی کن.</p>
     </section>
 
     <section class="section" id="faq"><div class="section-head"><div><p class="kicker" data-t="faqKicker">پرسش‌های کوتاه</p><h2 data-t="faqTitle">قبل از دانلود</h2></div></div><div class="faq">
+      <details><summary data-t="abiFaqQ">کدام فایل APK برای اندروید من مناسب است؟</summary><p data-t="abiFaqA">اگر معماری دستگاه را نمی‌دانی Universal را بگیر. ARM64 برای بیشتر گوشی‌های جدید، ARMv7 برای دستگاه‌های ۳۲ بیتی و x86_64 برای دستگاه‌های اندرویدی با پردازندهٔ x86_64 است.</p></details>
       <details><summary data-t="faq1Q">فایل‌های Pro از کجا می‌آیند؟</summary><p data-t="faq1A">این صفحه Releaseهای Pro را از مخزن عمومی رسمی هارمونی می‌خواند. فایل‌ها فقط وقتی نمایش داده می‌شوند که برای آن پلتفرم در Release منتشر شده باشند.</p></details>
       <details><summary data-t="faq2Q">چطور اشتراک بخرم یا تمدید کنم؟</summary><p data-t="faq2A">ربات رسمی را باز کن و گزینه‌های خرید یا تمدید را دنبال کن. مبلغ و جزئیات پرداخت در همان فرایند نمایش داده می‌شود.</p></details>
       <details><summary data-t="faq3Q">بعد از خرید چطور وارد اپ شوم؟</summary><p data-t="faq3A">حساب تلگرام را در برنامه پیوند بده و شمارهٔ متعلق به حساب را با دکمهٔ رسمی ربات تأیید کن.</p></details>
@@ -950,29 +1210,197 @@ h1 {
     </div></section>
   </main>
 
-  <footer class="wrap foot"><span data-t="footer">Harmoney Pro · دریافت از منبع رسمی</span><div class="foot-links"><a href="https://github.com/harmoneyvpn/Harmoney-VPN" target="_blank" rel="noopener noreferrer" data-t="githubLink">مخزن عمومی هارمونی</a><a href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer" data-t="supportLink">ربات و راهنما</a><a href="#home" data-t="backTop">بازگشت به بالا ↑</a></div></footer>
+  <footer class="wrap foot"><span data-t="footer">Harmoney VPN · دانلود رسمی Free و Pro</span><div class="foot-links"><a href="https://github.com/harmoneyvpn/Harmoney-VPN" target="_blank" rel="noopener noreferrer" data-t="githubLink">مخزن عمومی هارمونی</a><a href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer" data-t="supportLink">ربات و راهنما</a><a href="https://t.me/harmoney_vpn" target="_blank" rel="noopener noreferrer" data-t="channelLink">کانال تلگرام</a><a href="#home" data-t="backTop">بازگشت به بالا ↑</a></div></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
     const repo = "harmoneyvpn/Harmoney-VPN";
-    const releasesUrl = `https://api.github.com/repos/${repo}/releases?per_page=100`;
-    const repoReleasePage = `https://github.com/${repo}/releases`;
+    const releasesUrl = "https://api.github.com/repos/" + repo + "/releases?per_page=100";
+    const repoReleasePage = "https://github.com/" + repo + "/releases";
     const copy = {
       fa:{navFeatures:"ویژگی‌ها",navHow:"شروع کار",navDownload:"دانلود",navFaq:"پرسش‌ها",buyTop:"خرید اشتراک",eyebrow:"یک تجربهٔ جمع‌وجور برای اتصال‌های تو",headline:'اتصال‌هات را<br><span class="shine">یک‌جا مدیریت کن.</span>',lead:"Harmoney Pro برای مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN در یک اپ ساخته شده؛ نسخهٔ دستگاهت را بگیر و از ربات رسمی برای خرید یا تمدید راهنمایی بگیر.",downloadCta:"دریافت Harmoney Pro",botCta:"ورود به ربات تلگرام",micro1:"خروجی‌های رسمی و مستقیم",micro2:"خرید و تمدید از ربات",demoStatus:"آمادهٔ شروع",demoTitle:"اتصال، ساده‌تر",demoSubtitle:"پروفایل‌ها و اشتراک‌ها در کنار هم",demoFootLeft:"Harmoney Pro",demoFootRight:"آمادهٔ اتصال",stickerOne:"پرو، برای مسیر تو",stickerTwo:"همه‌چیز مرتب",stickerThree:"چند پلتفرم",featureKicker:"چرا Harmoney Pro؟",featureTitle:"ابزارهای لازم، بدون شلوغی",featureIntro:"یک محیط روشن برای مدیریت اتصال‌ها و دسترسی به اشتراک‌هایی که استفاده می‌کنی.",feature1Title:"اشتراک‌ها در یک‌جا",feature1Text:"اشتراک‌ها و پروفایل‌های سازگار را در برنامه اضافه و مدیریت کن؛ فایل‌های متداول مثل ‎.conf، ‎.ovpn، ‎.json و YAML پشتیبانی می‌شوند.",feature2Title:"انتخاب پروفایل دلخواه",feature2Text:"پروفایل یا سرویس موردنظرت را از داخل برنامه انتخاب کن و وضعیت اتصال را همان‌جا ببین.",feature3Title:"برای دستگاه‌های مختلف",feature3Text:"نسخه‌های منتشرشده برای Android، Windows، Linux و macOS از همین صفحه شناسایی و نمایش داده می‌شوند.",ipKicker:"یک انتخاب ویژه",ipTitle:"IP ثابت؛ وقتی یک آدرس خروجی مشخص لازم داری",ipIntro:"برای افرادی که دسترسی کاری‌شان به یک IP قابل پیش‌بینی وابسته است؛ مثل اتصال راه‌دور یا سرویس‌هایی که IP را در فهرست مجاز ثبت می‌کنند.",ipSticker:"📍 آدرس پایدار",ipUse1:"دسترسی راه‌دور به محیط کار",ipUse2:"سرویس‌های دارای فهرست IP مجاز",ipUse3:"اتصال پیوسته به سرور و پنل مدیریت",ipNote:"IP ثابت فقط در پلن‌هایی ارائه می‌شود که این گزینه در توضیحاتشان درج شده باشد؛ موجودی، موقعیت و شرایط را پیش از خرید در ربات بررسی کن.",howKicker:"شروع کار",howTitle:"از انتخاب تا اتصال، سه قدم",howIntro:"خرید و پیوند حساب از مسیر رسمی انجام می‌شود؛ برای راهنمایی هم ربات در دسترس است.",step1Title:"نسخهٔ مناسب را بگیر",step1Text:"سیستم‌عاملت را در بخش دانلود انتخاب کن و فایل رسمی منتشرشده را دریافت کن.",step2Title:"از ربات شروع کن",step2Text:"در گفت‌وگوی خصوصی ربات، گزینهٔ اشتراک را دنبال کن و شمارهٔ تلگرامت را با دکمهٔ رسمی ربات تأیید کن.",step3Title:"حساب را به برنامه پیوند بده",step3Text:"در Harmoney Pro گزینهٔ پیوند تلگرام را بزن و مراحل نمایش‌داده‌شده را کامل کن؛ سپس اشتراک‌های فعال را در برنامه ببین.",botTag:"ربات رسمی هارمونی",botTitle:"خرید، تمدید و پیگیری اشتراک از تلگرام",botText:"برای دیدن پلن‌ها و مبلغ روز، خرید یا تمدید را از ربات انجام بده. وضعیت اشتراک و پرداخت‌ها هم از همان گفت‌وگو قابل پیگیری است. ربات برای ورود به حساب، رمز عبور Harmoney را از تو نمی‌خواهد.",openBot:"باز کردن ربات",downloadKicker:"دریافت نسخه",downloadTitle:"نسخهٔ دستگاهت را انتخاب کن",loading:"در حال بررسی تازه‌ترین نسخهٔ Pro…",androidTag:"موبایل و تبلت",desktopTag:"رایانه",androidText:"فایل نصب APK برای دستگاه‌های Android.",windowsText:"نصاب رسمی Windows، در صورت انتشار.",linuxText:"بستهٔ ‎.deb یا آرشیو Linux، در صورت انتشار.",macText:"نسخهٔ macOS، در صورت انتشار.",loadingShort:"در حال بررسی…",releaseLabel:"نسخهٔ فعلی:",allReleases:"همهٔ فایل‌ها و هش‌ها",freeTitle:"دنبال نسخهٔ رایگان هستی؟",freeText:"نسخهٔ Harmoney Free را از صفحهٔ انتشارهای رسمی بگیر.",freeCta:"دریافت Harmoney Free",faqKicker:"پرسش‌های کوتاه",faqTitle:"قبل از دانلود",faq1Q:"فایل‌های Pro از کجا می‌آیند؟",faq1A:"این صفحه Releaseهای Pro را از مخزن عمومی رسمی هارمونی می‌خواند. فایل‌ها فقط وقتی نمایش داده می‌شوند که برای آن پلتفرم در Release منتشر شده باشند.",faq2Q:"چطور اشتراک بخرم یا تمدید کنم؟",faq2A:"ربات رسمی را باز کن و گزینه‌های خرید یا تمدید را دنبال کن. مبلغ و جزئیات پرداخت در همان فرایند نمایش داده می‌شود.",faq3Q:"بعد از خرید چطور وارد اپ شوم؟",faq3A:"حساب تلگرام را در برنامه پیوند بده و شمارهٔ متعلق به حساب را با دکمهٔ رسمی ربات تأیید کن.",faq4Q:"اگر دانلود شروع نشد چه کنم؟",faq4A:"صفحهٔ همهٔ Releaseهای Pro را باز کن یا از ربات تلگرام برای راهنمایی کمک بگیر.",footer:"Harmoney Pro · دریافت از منبع رسمی",githubLink:"مخزن عمومی هارمونی",supportLink:"ربات و راهنما",backTop:"بازگشت به بالا ↑",fetchError:"نسخه‌ها بارگذاری نشدند؛ از صفحهٔ همهٔ انتشارها استفاده کن.",notPublished:"هنوز فایلی برای این سیستم‌عامل منتشر نشده",download:"دانلود نسخهٔ Pro",downloadFor:"دریافت",published:"انتشار:",copied:"پیوند کپی شد"},
       en:{navFeatures:"Features",navHow:"Get started",navDownload:"Downloads",navFaq:"FAQ",buyTop:"Get a plan",eyebrow:"A clearer home for your connections",headline:'Your connections,<br><span class="shine">all in one place.</span>',lead:"Harmoney Pro helps you manage compatible VPN subscriptions and profiles in one app. Choose a build for your device and use the official bot for purchase or renewal.",downloadCta:"Get Harmoney Pro",botCta:"Open Telegram bot",micro1:"Official release files",micro2:"Plans and renewals in the bot",demoStatus:"Ready to start",demoTitle:"A simpler connection",demoSubtitle:"Profiles and subscriptions together",demoFootLeft:"Harmoney Pro",demoFootRight:"Ready to connect",stickerOne:"Pro for your route",stickerTwo:"Neatly organized",stickerThree:"Multiple platforms",featureKicker:"Why Harmoney Pro",featureTitle:"The tools you need, in one place",featureIntro:"A clear workspace to manage connections and the subscriptions you use.",feature1Title:"Subscriptions together",feature1Text:"Add and manage compatible subscriptions and profiles. Common formats such as .conf, .ovpn, .json, and YAML are supported.",feature2Title:"Choose a profile",feature2Text:"Select a profile or service in the app and check its connection status there.",feature3Title:"For different devices",feature3Text:"This page detects and lists published builds for Android, Windows, Linux, and macOS.",ipKicker:"A dedicated option",ipTitle:"A fixed IP, when you need a consistent exit address",ipIntro:"Useful for people whose work access depends on a predictable IP, such as remote connections or services that use IP allowlists.",ipSticker:"📍 Consistent address",ipUse1:"Remote access to work systems",ipUse2:"Services with IP allowlists",ipUse3:"Ongoing access to servers and admin panels",ipNote:"A fixed IP is available only on plans that explicitly include it. Check availability, location, and terms in the bot before purchase.",howKicker:"Get started",howTitle:"Three steps from download to setup",howIntro:"Purchases and account linking use the official flow; the bot can guide you.",step1Title:"Get your build",step1Text:"Choose your operating system in downloads and get its official published file.",step2Title:"Start with the bot",step2Text:"In the bot's private chat, follow the subscription prompts and verify your Telegram number with its official button.",step3Title:"Link your account",step3Text:"Choose Link Telegram in Harmoney Pro and follow the steps. Your active subscriptions will then appear in the app.",botTag:"Official Harmoney bot",botTitle:"Buy, renew, and check your subscription in Telegram",botText:"Open the bot to view current plans and prices, purchase or renew, and check payment status. The bot never asks for your Harmoney password.",openBot:"Open the bot",downloadKicker:"Downloads",downloadTitle:"Choose your device",loading:"Checking the latest Pro release…",androidTag:"Phone and tablet",desktopTag:"Desktop",androidText:"Android APK installer.",windowsText:"Official Windows installer, when published.",linuxText:"Linux .deb package or archive, when published.",macText:"macOS build, when published.",loadingShort:"Checking…",releaseLabel:"Current version:",allReleases:"All files and checksums",freeTitle:"Looking for the free edition?",freeText:"Get Harmoney Free from the official releases page.",freeCta:"Get Harmoney Free",faqKicker:"Quick answers",faqTitle:"Before you download",faq1Q:"Where do Pro files come from?",faq1A:"This page reads Pro releases from Harmoney's official public repository. A file appears only after it is published for that platform.",faq2Q:"How do I buy or renew?",faq2A:"Open the official bot and follow the purchase or renewal prompts. The amount and payment details are shown in that flow.",faq3Q:"How do I sign in after purchase?",faq3A:"Link your Telegram account in the app and verify the number belonging to that account with the bot's official button.",faq4Q:"What if a download does not start?",faq4A:"Open the page listing all Pro releases or ask the Telegram bot for help.",footer:"Harmoney Pro · Official downloads",githubLink:"Harmoney public repository",supportLink:"Bot and help",backTop:"Back to top ↑",fetchError:"Could not load releases. Use the all releases page.",notPublished:"No file has been published for this system yet",download:"Download Pro",downloadFor:"Get",published:"Published:",copied:"Link copied"}
     };
+    Object.assign(copy.fa, {
+      headline:'Harmoney VPN<br><span class="shine">Free و Pro برای اندروید.</span>',
+      lead:"نسخهٔ رایگان یا حرفه‌ای Harmoney را برای مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN انتخاب کن؛ فایل APK مناسب دستگاهت را از انتشار رسمی بگیر.",
+      stickerThree:"چهار نسخهٔ اندروید",
+      navDownload:"دانلود", downloadKicker:"دانلود Harmoney برای اندروید", downloadTitle:"نسخهٔ Free یا Pro را انتخاب کن",
+      footer:"Harmoney VPN · دانلود رسمی Free و Pro", channelLink:"کانال تلگرام",
+      androidIntro:"برای هر نسخه، فایل APK مناسب معماری گوشی یا تبلت اندرویدی‌ات را بردار.",
+      feature3Title:"برای معماری‌های مختلف اندروید",
+      feature3Text:"برای هر نسخه چهار فایل APK داریم: ARM64، ARMv7، x86_64 و Universal. نسخه‌های دیگر دستگاه‌ها به‌زودی اضافه می‌شوند.",
+      step1Text:"نسخهٔ Free یا Pro و فایل APK متناسب با دستگاه Android خودت را از بخش دانلود انتخاب کن.",
+      proEditionTag:"✨ نسخهٔ حرفه‌ای", proEditionText:"مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN؛ برای خرید یا تمدید اشتراک، ربات رسمی را ببین.",
+      freeEditionTag:"🟢 نسخهٔ رایگان", freeEditionText:"نسخهٔ رایگان هارمونی؛ فایل سازگار با معماری اندرویدت را مستقیم بگیر.",
+      versionLabel:"نسخه", arm64Text:"گوشی‌ها و تبلت‌های جدید ۶۴ بیتی", armv7Text:"دستگاه‌های قدیمی‌تر ۳۲ بیتی",
+      x64Text:"تبلت‌ها و دستگاه‌های اندرویدی x86_64", universalTitle:"Universal",
+      universalText:"انتخاب پیشنهادی اگر معماری دستگاهت را نمی‌دانی", downloadApk:"دانلود APK",
+      releaseDetails:"جزئیات نسخه و همهٔ فایل‌ها",
+      androidTip:"نمی‌دانی کدام فایل مناسب است؟ نسخهٔ Universal را انتخاب کن. برای نصب، فایل APK را باز و اجازهٔ نصب از این منبع را در تنظیمات اندروید فعال کن.",
+      soonTitle:"نسخه‌های دستگاه‌های دیگر هم در راه‌اند",
+      soonText:"فعلاً دانلود مستقیم این صفحه برای اندروید است؛ نسخه‌های بیشتر به‌زودی اضافه می‌شوند.",
+      comingSoon:"به‌زودی",
+      officialNote:"فایل‌ها از انتشارهای رسمی Harmoney در GitHub دریافت می‌شوند. نسخه و نام فایل را پیش از نصب بررسی کن.",
+      abiFaqQ:"کدام فایل APK برای اندروید من مناسب است؟",
+      abiFaqA:"اگر معماری دستگاه را نمی‌دانی Universal را بگیر. ARM64 برای بیشتر گوشی‌های جدید، ARMv7 برای دستگاه‌های ۳۲ بیتی و x86_64 برای دستگاه‌های اندرویدی با پردازندهٔ x86_64 است.",
+      loading:"در حال دریافت نسخه‌های رسمی از GitHub…",
+      fetchError:"نسخهٔ فعلی نمایش داده می‌شود؛ برای تازه‌ترین فایل‌ها صفحهٔ انتشارها را ببین.",
+      downloadStatus:"پیوندهای دانلود از انتشارهای رسمی GitHub به‌روز شدند.",
+      downloadPro:"دانلود Pro", downloadFree:"دانلود Free", notPublished:"این فایل هنوز منتشر نشده"
+    });
+    Object.assign(copy.en, {
+      headline:'Harmoney VPN<br><span class="shine">Free and Pro for Android.</span>',
+      lead:"Choose Harmoney Free or Pro to manage compatible VPN subscriptions and profiles, then get the official APK build for your device.",
+      stickerThree:"Four Android builds",
+      navDownload:"Downloads", downloadKicker:"Harmoney Android downloads", downloadTitle:"Choose Free or Pro",
+      footer:"Harmoney VPN · Official Free and Pro downloads", channelLink:"Telegram channel",
+      androidIntro:"Pick the APK that matches your Android phone or tablet architecture.",
+      feature3Title:"For Android architectures",
+      feature3Text:"Each edition has four APK builds: ARM64, ARMv7, x86_64, and Universal. More device platforms are coming soon.",
+      step1Text:"Choose Harmoney Free or Pro, then select the APK build that matches your Android device.",
+      proEditionTag:"✨ Pro edition", proEditionText:"Manage compatible VPN subscriptions and profiles. Visit the official bot to purchase or renew a plan.",
+      freeEditionTag:"🟢 Free edition", freeEditionText:"The free Harmoney edition. Download the APK that matches your Android device.",
+      versionLabel:"Version", arm64Text:"Modern 64-bit phones and tablets", armv7Text:"Older 32-bit Android devices",
+      x64Text:"Android x86_64 tablets and devices", universalTitle:"Universal",
+      universalText:"Recommended if you are unsure which architecture your device uses", downloadApk:"Download APK",
+      releaseDetails:"Release details and all files",
+      androidTip:"Not sure which file to choose? Pick Universal. To install, open the APK and allow installs from this source in Android settings.",
+      soonTitle:"More device platforms are on the way",
+      soonText:"Direct downloads on this page are currently for Android. More platform builds are coming soon.",
+      comingSoon:"Coming soon",
+      officialNote:"Files come from Harmoney's official GitHub releases. Check the version and file name before installing.",
+      abiFaqQ:"Which Android APK should I download?",
+      abiFaqA:"Choose Universal if you are unsure. ARM64 is for most modern phones, ARMv7 is for 32-bit devices, and x86_64 is for Android devices with x86_64 processors.",
+      loading:"Loading official releases from GitHub…",
+      fetchError:"Current downloads are shown. Visit the releases page for the newest files.",
+      downloadStatus:"Download links have been refreshed from the official GitHub releases.",
+      downloadPro:"Download Pro", downloadFree:"Download Free", notPublished:"This file has not been published yet"
+    });
+
     let language = "fa";
-    const cards = [...document.querySelectorAll("[data-platform]")];
-    const platformKeys = Object.keys(copy.fa);
-    function setLanguage(next){language=copy[next]?next:"fa";const t=copy[language];document.documentElement.lang=language;document.documentElement.dir=language==="fa"?"rtl":"ltr";document.getElementById("language").value=language;document.title=language==="fa"?"Harmoney Pro | دانلود رسمی":"Harmoney Pro | Official downloads";document.querySelectorAll("[data-t]").forEach(el=>{const value=t[el.dataset.t];if(value)el.textContent=value});document.querySelectorAll("[data-t-html]").forEach(el=>{const value=t[el.dataset.tHtml];if(value)el.innerHTML=value});cards.forEach(card=>{const link=card.querySelector(".download-link");if(link.dataset.url){link.textContent=t.download;}});}
-    document.getElementById("language").addEventListener("change",event=>setLanguage(event.target.value));
-    function semver(tag){const m=tag.match(/^pro-v(\d+)\.(\d+)\.(\d+)(?:[-+.]?([\w.-]+))?$/i);return m?[Number(m[1]),Number(m[2]),Number(m[3]),m[4]||""]:null}
-    function compareRelease(a,b){const av=semver(a.tag_name),bv=semver(b.tag_name);for(let i=0;i<3;i++)if(av[i]!==bv[i])return bv[i]-av[i];if(av[3]!==bv[3])return av[3]?1:-1;return new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at)}
-    function assetFor(assets,patterns){return assets.find(a=>patterns.some(p=>p.test(a.name)))}
-    function setCard(platform,asset){const card=document.querySelector(`[data-platform="${platform}"]`);const link=card.querySelector(".download-link");const t=copy[language];if(asset){link.href=asset.browser_download_url;link.target="_blank";link.rel="noopener noreferrer";link.classList.remove("disabled");link.removeAttribute("aria-disabled");link.dataset.url=asset.browser_download_url;link.textContent=`${t.download} · ${humanSize(asset.size)}`;link.setAttribute("aria-label",`${t.download} ${card.querySelector("h3").textContent}: ${asset.name}`)}else{link.href=repoReleasePage;link.target="_blank";link.rel="noopener noreferrer";link.classList.add("disabled");link.removeAttribute("aria-disabled");link.dataset.url="";link.textContent=t.notPublished;link.title=t.notPublished}}
-    function humanSize(bytes){if(!bytes)return"";const mb=bytes/1048576;return `${mb<10?mb.toFixed(1):Math.round(mb)} MB`}
-    async function loadReleases(){const status=document.getElementById("release-status");try{const response=await fetch(releasesUrl,{headers:{Accept:"application/vnd.github+json"}});if(!response.ok)throw new Error(`GitHub API ${response.status}`);const list=await response.json();const release=list.filter(r=>r.tag_name&&semver(r.tag_name)).sort(compareRelease)[0];if(!release)throw new Error("No Pro release found");const assets=release.assets||[];document.getElementById("release-version").textContent=release.tag_name.replace(/^pro-v/i,"v");document.getElementById("checksums-link").href=release.html_url;const checksum=assetFor(assets,[/^SHA256SUMS\.txt$/i,/checksums?.*\.txt$/i]);if(checksum)document.getElementById("checksums-link").href=checksum.browser_download_url;const date=release.published_at||release.created_at;if(date){const d=new Date(date);document.getElementById("published-at").textContent=`${copy[language].published} ${new Intl.DateTimeFormat(language==="fa"?"fa-IR":"en-US",{dateStyle:"medium"}).format(d)}`}const match={android:assetFor(assets,[/universal.*\.apk$/i,/\.apk$/i]),windows:assetFor(assets,[/\.exe$/i,/\.msi$/i,/windows.*\.zip$/i]),linux:assetFor(assets,[/\.deb$/i,/\.appimage$/i,/linux.*\.tar\.gz$/i]),macos:assetFor(assets,[/\.dmg$/i,/\.pkg$/i,/macos.*\.zip$/i])};Object.entries(match).forEach(([key,asset])=>setCard(key,asset));status.textContent=release.name||release.tag_name;status.dataset.loaded="true";}catch(error){console.error("Unable to load Harmoney Pro releases",error);status.textContent=copy[language].fetchError;cards.forEach(card=>setCard(card.dataset.platform,null));}}
-    setLanguage(language);loadReleases();
+    const abiPatterns = {
+      arm64: /Android-arm64-v8a\.apk$/i,
+      armv7: /Android-armeabi-v7a\.apk$/i,
+      x64: /Android-x86_64\.apk$/i,
+      universal: /Android-universal\.apk$/i
+    };
+    const releaseLinkFor = edition => document.getElementById(edition + "-release-link");
+    const releaseVersionFor = edition => document.getElementById(edition + "-version");
+    const releaseNameFor = edition => document.getElementById(edition + "-release-name");
+
+    function setLanguage(next) {
+      language = copy[next] ? next : "fa";
+      const t = copy[language];
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
+      document.getElementById("language").value = language;
+      document.title = language === "fa"
+        ? "دانلود Harmoney VPN برای اندروید | نسخه Free و Pro"
+        : "Download Harmoney VPN for Android | Free and Pro";
+      document.querySelector('meta[name="description"]').content = language === "fa"
+        ? "دانلود رسمی Harmoney VPN برای اندروید؛ نسخه‌های Harmoney Free و Harmoney Pro با APK مناسب ARM64، ARMv7، x86_64 و Universal."
+        : "Official Harmoney VPN downloads for Android. Get Harmoney Free or Pro with APK builds for ARM64, ARMv7, x86_64, and Universal.";
+      document.querySelectorAll("[data-t]").forEach(element => {
+        const value = t[element.dataset.t];
+        if (value) element.textContent = value;
+      });
+      document.querySelectorAll("[data-t-html]").forEach(element => {
+        const value = t[element.dataset.tHtml];
+        if (value) element.innerHTML = value;
+      });
+      document.querySelectorAll("[data-edition][data-abi]").forEach(renderApkLabel);
+    }
+
+    document.getElementById("language").addEventListener("change", event => setLanguage(event.target.value));
+
+    function parseVersion(tag, edition) {
+      const pattern = edition === "pro"
+        ? /^pro-v(\d+)\.(\d+)\.(\d+)(?:[-+.]?([\w.-]+))?$/i
+        : /^v(\d+)\.(\d+)\.(\d+)(?:[-+.]?([\w.-]+))?$/i;
+      const match = tag.match(pattern);
+      return match ? [Number(match[1]), Number(match[2]), Number(match[3]), match[4] || ""] : null;
+    }
+
+    function compareRelease(a, b, edition) {
+      const av = parseVersion(a.tag_name, edition);
+      const bv = parseVersion(b.tag_name, edition);
+      for (let index = 0; index < 3; index++) {
+        if (av[index] !== bv[index]) return bv[index] - av[index];
+      }
+      if (av[3] !== bv[3]) return av[3] ? 1 : -1;
+      return new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at);
+    }
+
+    function humanSize(bytes) {
+      if (!bytes) return "";
+      const mb = bytes / 1048576;
+      return (mb < 10 ? mb.toFixed(1) : Math.round(mb)) + " MB";
+    }
+
+    function renderApkLabel(link) {
+      const label = copy[language][link.dataset.edition === "pro" ? "downloadPro" : "downloadFree"];
+      const size = link.dataset.size ? " · " + humanSize(Number(link.dataset.size)) : "";
+      link.textContent = label + " · " + (link.dataset.abiLabel || link.dataset.abi.toUpperCase()) + size;
+    }
+
+    function setApkLink(edition, abi, asset) {
+      const link = document.getElementById(edition + "-" + abi);
+      if (!asset) {
+        link.href = releaseLinkFor(edition).href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.classList.add("disabled");
+        link.setAttribute("aria-disabled", "true");
+        link.dataset.size = "";
+        link.title = copy[language].notPublished;
+        renderApkLabel(link);
+        return;
+      }
+      link.href = asset.browser_download_url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.classList.remove("disabled");
+      link.removeAttribute("aria-disabled");
+      link.dataset.size = String(asset.size || "");
+      link.title = asset.name;
+      renderApkLabel(link);
+    }
+
+    function updateEdition(edition, release) {
+      const tag = release.tag_name;
+      const version = tag.replace(edition === "pro" ? /^pro-v/i : /^v/i, "");
+      releaseVersionFor(edition).textContent = version;
+      releaseNameFor(edition).textContent = release.name || tag;
+      releaseLinkFor(edition).href = release.html_url;
+      for (const [abi, pattern] of Object.entries(abiPatterns)) {
+        const asset = (release.assets || []).find(item => pattern.test(item.name));
+        setApkLink(edition, abi, asset);
+      }
+    }
+
+    async function loadReleases() {
+      const status = document.getElementById("release-status");
+      try {
+        const response = await fetch(releasesUrl, { headers: { Accept: "application/vnd.github+json" } });
+        if (!response.ok) throw new Error("GitHub API " + response.status);
+        const list = await response.json();
+        for (const edition of ["pro", "free"]) {
+          const release = list
+            .filter(item => item.tag_name && parseVersion(item.tag_name, edition))
+            .sort((a, b) => compareRelease(a, b, edition))[0];
+          if (!release) throw new Error("No " + edition + " release found");
+          updateEdition(edition, release);
+        }
+        status.textContent = copy[language].downloadStatus;
+      } catch (error) {
+        console.error("Unable to refresh Harmoney Android releases", error);
+        status.textContent = copy[language].fetchError;
+      }
+    }
+
+    setLanguage(language);
+    loadReleases();
   </script>
 </body>
 </html>
