@@ -1,0 +1,195 @@
+name: Publish Harmoney release assets
+
+on:
+  workflow_run:
+    workflows: [Harmoney Community builds]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful Harmoney Community builds run ID
+        required: true
+        type: string
+      source_sha:
+        description: Commit SHA used by that build
+        required: true
+        type: string
+      release_tag:
+        description: Release tag to create or update
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  publish:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: write
+    steps:
+      - name: Check out the exact build commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || inputs.source_sha }}
+      - name: Resolve build and release metadata
+        id: metadata
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          WORKFLOW_RUN_ID: ${{ github.event.workflow_run.id }}
+          DISPATCH_RUN_ID: ${{ inputs.run_id }}
+          DISPATCH_TAG: ${{ inputs.release_tag }}
+          WORKFLOW_SOURCE_SHA: ${{ github.event.workflow_run.head_sha }}
+          DISPATCH_SOURCE_SHA: ${{ inputs.source_sha }}
+        run: |
+          set -euo pipefail
+          version="$(sed -n 's/^version: \([^+]*\).*/\1/p' apps/flutter/pubspec.yaml)"
+          source_sha="$WORKFLOW_SOURCE_SHA"
+          run_id="$WORKFLOW_RUN_ID"
+          tag="v$version"
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            source_sha="$DISPATCH_SOURCE_SHA"
+            run_id="$DISPATCH_RUN_ID"
+            tag="${DISPATCH_TAG:-$tag}"
+          fi
+          [[ -n "$version" && -n "$source_sha" && -n "$run_id" && -n "$tag" ]]
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "source_sha=$source_sha" >> "$GITHUB_OUTPUT"
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+      - name: Download universal Android APK
+        uses: actions/download-artifact@v4
+        with:
+          name: harmoney-community-android
+          path: release-assets/android-universal
+          github-token: ${{ secrets.RELEASES_TOKEN || github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.metadata.outputs.run_id }}
+      - name: Download Android ABI APKs
+        uses: actions/download-artifact@v4
+        with:
+          name: harmoney-community-android-splits
+          path: release-assets/android-splits
+          github-token: ${{ secrets.RELEASES_TOKEN || github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.metadata.outputs.run_id }}
+      - name: Download Linux application bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: harmoney-community-linux
+          path: release-assets/linux-bundle
+          github-token: ${{ secrets.RELEASES_TOKEN || github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.metadata.outputs.run_id }}
+      - name: Download Linux installers
+        uses: actions/download-artifact@v4
+        with:
+          name: harmoney-community-linux-installers
+          path: release-assets/linux-installers
+          github-token: ${{ secrets.RELEASES_TOKEN || github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.metadata.outputs.run_id }}
+      - name: Download Windows application bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: harmoney-community-windows
+          path: release-assets/windows-bundle
+          github-token: ${{ secrets.RELEASES_TOKEN || github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.metadata.outputs.run_id }}
+      - name: Download Windows installer
+        uses: actions/download-artifact@v4
+        with:
+          name: harmoney-community-windows-installer
+          path: release-assets/windows-installer
+          github-token: ${{ secrets.RELEASES_TOKEN || github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.metadata.outputs.run_id }}
+      - name: Prepare release files
+        shell: bash
+        env:
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          set -euo pipefail
+          cp release-assets/android-universal/app-release.apk release-assets/harmoney-community-android.apk
+          cp release-assets/android-splits/app-armeabi-v7a-release.apk "release-assets/HarmoneyVPN-${VERSION}-android-armeabi-v7a.apk"
+          cp release-assets/android-splits/app-arm64-v8a-release.apk "release-assets/HarmoneyVPN-${VERSION}-android-arm64-v8a.apk"
+          cp release-assets/android-splits/app-x86_64-release.apk "release-assets/HarmoneyVPN-${VERSION}-android-x86_64.apk"
+          cp "release-assets/linux-installers/HarmoneyVPN-${VERSION}-amd64.deb" release-assets/
+          cp "release-assets/linux-installers/HarmoneyVPN-${VERSION}-x86_64.AppImage" release-assets/
+          cp "release-assets/HarmoneyVPN-${VERSION}-amd64.deb" release-assets/harmoney-community-linux-amd64.deb
+          cp "release-assets/HarmoneyVPN-${VERSION}-x86_64.AppImage" release-assets/harmoney-community-linux-x86_64.AppImage
+          test -s release-assets/windows-bundle/connectivity_plus_plugin.dll
+          test -s release-assets/windows-bundle/flutter_secure_storage_windows_plugin.dll
+          installer=(release-assets/windows-installer/*.exe)
+          test -s "${installer[0]}"
+          cp "${installer[0]}" release-assets/harmoney-community-windows-x64-setup.exe
+          (cd release-assets/linux-bundle && zip -qr ../harmoney-community-linux.zip .)
+          (cd release-assets/windows-bundle && zip -qr ../harmoney-community-windows.zip .)
+          test -s release-assets/harmoney-community-android.apk
+          test -s release-assets/harmoney-community-windows.zip
+          test -s release-assets/harmoney-community-linux.zip
+          unzip -l release-assets/harmoney-community-windows.zip | grep -q 'connectivity_plus_plugin.dll'
+          unzip -l release-assets/harmoney-community-windows.zip | grep -q 'flutter_secure_storage_windows_plugin.dll'
+      - name: Create draft release when needed
+        env:
+          GH_TOKEN: ${{ secrets.RELEASES_TOKEN || github.token }}
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+          SOURCE_SHA: ${{ steps.metadata.outputs.source_sha }}
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          set -euo pipefail
+          if ! gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$RELEASE_TAG" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "Harmoney VPN $VERSION" \
+              --notes "Harmoney VPN Community release $VERSION. Includes Android APKs, Windows, and Linux installers." \
+              --draft
+          fi
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ secrets.RELEASES_TOKEN || github.token }}
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release upload "$RELEASE_TAG" \
+            release-assets/harmoney-community-android.apk \
+            release-assets/HarmoneyVPN-*-android-*.apk \
+            release-assets/HarmoneyVPN-*.deb \
+            release-assets/HarmoneyVPN-*.AppImage \
+            release-assets/harmoney-community-linux-amd64.deb \
+            release-assets/harmoney-community-linux-x86_64.AppImage \
+            release-assets/harmoney-community-windows-x64-setup.exe \
+            release-assets/harmoney-community-linux.zip \
+            release-assets/harmoney-community-windows.zip \
+            release-assets/windows-installer/*.exe \
+            --repo "$GITHUB_REPOSITORY" \
+            --clobber
+      - name: Remove obsolete standalone Windows executable
+        env:
+          GH_TOKEN: ${{ secrets.RELEASES_TOKEN || github.token }}
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+        run: |
+          set -euo pipefail
+          for tag in "$RELEASE_TAG" v0.1.0; do
+            gh release delete-asset "$tag" harmoney_community.exe \
+              --repo "$GITHUB_REPOSITORY" --yes || true
+          done
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ secrets.RELEASES_TOKEN || github.token }}
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+        run: |
+          set -euo pipefail
+          is_draft="$(gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)"
+          if [[ "$is_draft" == "true" ]]; then
+            gh release edit "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+          fi

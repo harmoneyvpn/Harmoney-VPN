@@ -1,0 +1,12 @@
+{
+  "upstream": "https://github.com/UnboundTechCo/defyxVPN",
+  "release": "v5.10.0",
+  "artifact": "https://github.com/UnboundTechCo/defyxVPN/releases/download/v5.10.0/DefyxVPN-Android-arm64-v8a.apk",
+  "artifact_sha256": "c6e8c1785ec675cf49f4e0b53ac67619d104cce91c7d6a8678dc5dcc1b28188e",
+  "architecture": "arm64-v8a",
+  "native_library": "lib/arm64-v8a/libgojni.so",
+  "native_sha256": "129c81b3b37d2c49d9f189116aa54cffce2199b0921d103d71de61bf01e96c90",
+  "bindings_sha256": "331b97d20662d5980aa12bd616b8bfa5f3236e1014519fd1b9a8566604364299",
+  "bindings": "Only android/* GoMobile exports and go/* runtime classes from the matching official release; app classes are excluded.",
+  "notice": "Precompiled third-party DXcore engine. Upstream licensing applies. Harmoney branding does not grant a new license to the engine. This is not the public DXcore mock/stub."
+}

@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071713">
+  <meta name="description" content="Harmoney Pro؛ مدیریت اشتراک‌ها و پروفایل‌های VPN در یک اپ. دانلود نسخه‌های رسمی، راهنمای خرید و پشتیبانی تلگرام.">
+  <meta property="og:title" content="Harmoney Pro — اتصال، ساده‌تر">
+  <meta property="og:description" content="نسخهٔ مناسب دستگاهت را پیدا کن، از ربات رسمی اشتراک بگیر و شروع کن.">
+  <meta property="og:type" content="website">
+  <title>Harmoney Pro | دانلود رسمی</title>
+  <style>
+:root {
+  color-scheme:dark;
+  --bg:#071713;
+  --bg2:#0b201b;
+  --panel:#0f2620;
+  --panel2:#122d26;
+  --line:#25463b;
+  --text:#f1f7f3;
+  --muted:#a2b7ad;
+  --mint:#65f0bd;
+  --mint2:#b4ffdc;
+  --purple:#b69aff;
+  --yellow:#ffe18a;
+  --pink:#ff9fc4;
+  --blue:#8bdcff;
+  --radius:24px
+}
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth
+}
+body {
+  margin:0;
+  min-width:320px;
+  background:radial-gradient(ellipse at 15% 0%,#154433 0,transparent 36rem),radial-gradient(ellipse at 95% 22%,#30254e 0,transparent 30rem),var(--bg);
+  color:var(--text);
+  font-family:Inter,"Segoe UI",Tahoma,sans-serif;
+  line-height:1.75
+}
+a {
+  color:inherit
+}
+button,a {
+  font:inherit
+}
+.wrap {
+  width:min(1160px,calc(100% - 40px));
+  margin:auto
+}
+.topbar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:22px 0
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  text-decoration:none;
+  font-size:1.04rem;
+  font-weight:850;
+  letter-spacing:-.03em
+}
+.brand-mark {
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  border:1px solid #65f0bd80;
+  border-radius:15px;
+  color:var(--mint);
+  background:#65f0bd12;
+  box-shadow:0 0 30px #65f0bd18
+}
+.brand-mark svg {
+  width:25px;
+  height:25px
+}
+.brand b {
+  color:var(--mint)
+}
+nav {
+  display:flex;
+  align-items:center;
+  gap:25px;
+  color:#c7d8ce;
+  font-size:.91rem
+}
+nav a {
+  text-decoration:none
+}
+nav a:hover {
+  color:var(--mint)
+}
+.nav-actions {
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+.lang {
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:8px 12px;
+  color:var(--text);
+  background:#0b1c17;
+  cursor:pointer
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:48px;
+  padding:11px 18px;
+  border:1px solid transparent;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:800;
+  transition:transform .2s ease,filter .2s ease,border-color .2s ease
+}
+.btn:hover {
+  transform:translateY(-2px);
+  filter:brightness(1.07)
+}
+.btn-primary {
+  color:#06251a;
+  background:linear-gradient(135deg,var(--mint2),var(--mint));
+  box-shadow:0 12px 35px #38d99a20
+}
+.btn-quiet {
+  border-color:#3b6252;
+  color:#e3f0e8;
+  background:#11271f
+}
+.btn svg {
+  width:19px;
+  height:19px;
+  flex:none
+}
+.hero {
+  position:relative;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:40px;
+  min-height:560px;
+  padding:46px 0 65px
+}
+.hero-copy {
+  position:relative;
+  z-index:1
+}
+.eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:7px 13px;
+  border:1px solid #65f0bd45;
+  border-radius:99px;
+  color:var(--mint2);
+  background:#65f0bd0c;
+  font-size:.83rem;
+  font-weight:700
+}
+.live-dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--mint);
+  box-shadow:0 0 15px var(--mint)
+}
+h1 {
+  max-width:690px;
+  margin:22px 0 14px;
+  font-size:clamp(2.8rem,6.2vw,5.45rem);
+  line-height:1.13;
+  letter-spacing:-.065em
+}
+.shine {
+  color:var(--mint);
+  text-shadow:0 0 38px #65f0bd25
+}
+.lead {
+  max-width:600px;
+  margin:0;
+  color:#bbcec3;
+  font-size:clamp(1rem,1.6vw,1.18rem)
+}
+.hero-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:26px
+}
+.micro {
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:20px;
+  color:#94ab9f;
+  font-size:.84rem
+}
+.micro span {
+  display:inline-flex;
+  align-items:center;
+  gap:7px
+}
+.check {
+  color:var(--mint);
+  font-weight:900
+}
+.art {
+  position:relative;
+  display:grid;
+  place-items:center;
+  min-height:410px
+}
+.orbit {
+  position:absolute;
+  width:min(390px,83vw);
+  aspect-ratio:1;
+  border:1px dashed #6ee5b634;
+  border-radius:50%;
+  animation:spin 55s linear infinite
+}
+.orbit:before,.orbit:after {
+  content:"";
+  position:absolute;
+  border:1px solid #8b73dc28;
+  border-radius:50%
+}
+.orbit:before {
+  inset:30px
+}
+.orbit:after {
+  inset:68px
+}
+.halo {
+  position:absolute;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background:radial-gradient(circle,#54eeb839 0,transparent 68%);
+  filter:blur(8px)
+}
+.app-card {
+  position:relative;
+  z-index:1;
+  width:min(290px,75vw);
+  padding:20px;
+  border:1px solid #8cbea35a;
+  border-radius:30px;
+  background:linear-gradient(150deg,#183a2fef,#0b211bee);
+  box-shadow:0 28px 90px #0008,0 0 60px #65f0bd12;
+  transform:rotate(-4deg)
+}
+.app-card-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#aec5b7;
+  font-size:.78rem
+}
+.status-pill {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 9px;
+  border-radius:99px;
+  color:var(--mint2);
+  background:#65f0bd15
+}
+.app-card h2 {
+  margin:19px 0 3px;
+  font-size:1.55rem
+}
+.app-card p {
+  margin:0;
+  color:#9cb3a7;
+  font-size:.85rem
+}
+.dial {
+  display:grid;
+  place-items:center;
+  width:165px;
+  height:165px;
+  margin:22px auto 20px;
+  border:1px solid #65f0bd38;
+  border-radius:50%;
+  background:radial-gradient(circle at 40% 35%,#285a46,#10281f 67%);
+  box-shadow:inset 0 0 28px #65f0bd0e,0 0 35px #65f0bd0e
+}
+.dial svg {
+  width:71px;
+  height:71px;
+  color:var(--mint)
+}
+.app-card-foot {
+  display:flex;
+  justify-content:space-between;
+  padding-top:14px;
+  border-top:1px solid #ffffff13;
+  color:#bad0c3;
+  font-size:.78rem
+}
+.sticker {
+  position:absolute;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border:1px solid #ffffff24;
+  border-radius:18px;
+  color:#10251b;
+  background:#edfff5;
+  box-shadow:0 16px 40px #0005;
+  font-size:.85rem;
+  font-weight:900;
+  transform:rotate(7deg)
+}
+.sticker span:first-child {
+  font-size:1.25rem
+}
+.s-one {
+  top:38px;
+  right:2%;
+  background:var(--yellow);
+  transform:rotate(8deg)
+}
+.s-two {
+  bottom:53px;
+  left:0;
+  background:var(--purple);
+  transform:rotate(-8deg)
+}
+.s-three {
+  top:51%;
+  right:-3%;
+  background:var(--pink);
+  transform:rotate(10deg)
+}
+.section {
+  padding:70px 0
+}
+.section-head {
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:25px
+}
+.kicker {
+  margin:0 0 7px;
+  color:var(--mint);
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.04em
+}
+.section h2 {
+  margin:0;
+  font-size:clamp(1.8rem,3.8vw,2.8rem);
+  line-height:1.28;
+  letter-spacing:-.04em
+}
+.section-head>p {
+  max-width:450px;
+  margin:0;
+  color:var(--muted)
+}
+.features {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px
+}
+.ip-section {
+  position:relative;
+  overflow:hidden;
+  padding:clamp(25px,5vw,42px);
+  border:1px solid #8c73dc55;
+  border-radius:30px;
+  background:radial-gradient(ellipse at 5% 100%,#b69aff18,transparent 36%),linear-gradient(120deg,#151e2d,#10271f)
+}
+.ip-head {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:22px
+}
+.ip-head h2 {
+  max-width:680px
+}
+.ip-head p {
+  max-width:670px;
+  margin:11px 0 0;
+  color:#b5c5bd
+}
+.ip-sticker {
+  flex:none;
+  padding:10px 15px;
+  border:1px solid #ffffff40;
+  border-radius:17px;
+  color:#241c38;
+  background:var(--purple);
+  box-shadow:0 14px 35px #0004;
+  font-weight:950;
+  transform:rotate(7deg)
+}
+.ip-uses {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:23px
+}
+.ip-use {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-height:75px;
+  padding:15px;
+  border:1px solid #ffffff18;
+  border-radius:17px;
+  color:#e2eee7;
+  background:#ffffff08;
+  font-weight:750
+}
+.ip-use span:first-child {
+  font-size:1.35rem
+}
+.ip-note {
+  margin:18px 0 0;
+  color:#a6b9ad;
+  font-size:.86rem
+}
+.feature {
+  min-height:218px;
+  padding:23px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:linear-gradient(145deg,#112a22,#0b1d18)
+}
+.feature-icon {
+  display:grid;
+  place-items:center;
+  width:49px;
+  height:49px;
+  border:1px solid #65f0bd28;
+  border-radius:16px;
+  color:var(--mint);
+  background:#65f0bd10;
+  font-size:1.35rem
+}
+.feature h3 {
+  margin:18px 0 6px;
+  font-size:1.1rem
+}
+.feature p {
+  margin:0;
+  color:var(--muted);
+  font-size:.92rem
+}
+.flow {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  counter-reset:step
+}
+.step {
+  position:relative;
+  padding:22px;
+  border:1px solid #28483d;
+  border-radius:20px;
+  background:#0c201a;
+  counter-increment:step
+}
+.step:before {
+  content:"0" counter(step);
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  margin-bottom:16px;
+  border-radius:13px;
+  color:#06251a;
+  background:var(--mint);
+  font-weight:900
+}
+.step h3 {
+  margin:0 0 7px
+}
+.step p {
+  margin:0;
+  color:var(--muted);
+  font-size:.91rem
+}
+.bot-panel {
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:24px;
+  padding:clamp(26px,5vw,48px);
+  border:1px solid #58d9a746;
+  border-radius:30px;
+  background:radial-gradient(ellipse at 8% 90%,#4ee7a51a,transparent 35%),linear-gradient(120deg,#122d24,#18213a)
+}
+.bot-panel:after {
+  content:"✦";
+  position:absolute;
+  left:40%;
+  top:-50px;
+  color:#65f0bd14;
+  font-size:210px;
+  line-height:1
+}
+.bot-panel h2 {
+  position:relative;
+  z-index:1;
+  max-width:650px;
+  margin:0 0 10px;
+  font-size:clamp(1.65rem,3.6vw,2.6rem);
+  line-height:1.35
+}
+.bot-panel p {
+  position:relative;
+  z-index:1;
+  max-width:650px;
+  margin:0;
+  color:#b7cabe
+}
+.bot-panel .btn {
+  position:relative;
+  z-index:1;
+  min-width:185px
+}
+.bot-tag {
+  display:inline-flex;
+  margin-bottom:13px;
+  padding:5px 10px;
+  border-radius:99px;
+  color:var(--mint2);
+  background:#65f0bd16;
+  font-size:.8rem;
+  font-weight:800
+}
+.downloads {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px
+}
+.download-card {
+  display:flex;
+  flex-direction:column;
+  min-height:220px;
+  padding:19px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(150deg,#112820,#0b1d18)
+}
+.download-top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+.os-icon {
+  display:grid;
+  place-items:center;
+  width:46px;
+  height:46px;
+  border-radius:15px;
+  color:var(--mint);
+  background:#65f0bd12;
+  font-size:1.35rem;
+  font-weight:900
+}
+.os-tag {
+  color:#92aa9c;
+  font-size:.72rem
+}
+.download-card h3 {
+  margin:15px 0 3px;
+  font-size:1.08rem
+}
+.download-card p {
+  min-height:43px;
+  margin:0 0 16px;
+  color:var(--muted);
+  font-size:.82rem
+}
+.download-link {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:42px;
+  margin-top:auto;
+  border:1px solid #65f0bd59;
+  border-radius:12px;
+  color:#07251a;
+  background:var(--mint);
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:900
+}
+.download-link.disabled {
+  border-color:#365046;
+  color:#9db0a4;
+  background:#172921
+}
+.release-meta {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin-top:18px;
+  color:#a6bbae;
+  font-size:.82rem
+}
+.release-meta strong {
+  color:var(--mint2)
+}
+.release-meta a {
+  color:var(--mint2)
+}
+.free-banner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-top:22px;
+  padding:20px 23px;
+  border:1px solid #504876;
+  border-radius:20px;
+  background:linear-gradient(100deg,#211c39,#15251f)
+}
+.free-banner p {
+  margin:0;
+  color:#c3c1d5
+}
+.free-banner strong {
+  color:#e2d6ff
+}
+.free-banner a {
+  flex:none;
+  color:#e1d5ff;
+  font-weight:800;
+  text-decoration:none
+}
+.faq {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
+.faq details {
+  padding:18px 20px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:#0d211b
+}
+.faq summary {
+  cursor:pointer;
+  font-weight:800
+}
+.faq details p {
+  margin:12px 0 0;
+  color:var(--muted);
+  font-size:.9rem
+}
+.foot {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:27px 0 38px;
+  border-top:1px solid #ffffff17;
+  color:#92a99c;
+  font-size:.85rem
+}
+.foot-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px
+}
+.foot a {
+  color:#b9d4c5;
+  text-decoration:none
+}
+.toast {
+  position:fixed;
+  right:50%;
+  bottom:18px;
+  z-index:5;
+  transform:translate(50%,20px);
+  padding:10px 15px;
+  border:1px solid #3c6553;
+  border-radius:12px;
+  color:var(--text);
+  background:#12271f;
+  opacity:0;
+  pointer-events:none;
+  transition:.2s
+}
+.toast.show {
+  transform:translate(50%,0);
+  opacity:1
+}
+.sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0
+}
+@keyframes spin {
+  to {
+    transform:rotate(360deg)
+  }
+}
+@media(max-width:900px) {
+  nav {
+    gap:15px
+  }
+  .hero {
+    grid-template-columns:1fr .8fr;
+    gap:16px
+  }
+  .features {
+    grid-template-columns:1fr 1fr
+  }
+  .downloads {
+    grid-template-columns:1fr 1fr
+  }
+  .app-card {
+    width:260px
+  }
+  .ip-uses {
+    grid-template-columns:1fr
+  }
+  .orbit {
+    width:340px
+  }
+  .s-three {
+    right:-5%
+  }
+}
+@media(max-width:700px) {
+  .wrap {
+    width:min(100% - 28px,1160px)
+  }
+  nav {
+    display:none
+  }
+  .topbar {
+    padding:15px 0
+  }
+  .nav-actions>.btn {
+    display:none
+  }
+  .hero {
+    grid-template-columns:1fr;
+    min-height:auto;
+    padding:43px 0 48px
+  }
+  .hero-copy {
+    max-width:650px
+  }
+  .art {
+    min-height:355px;
+    margin-top:2px
+  }
+  .app-card {
+    width:245px
+  }
+  .orbit {
+    width:320px
+  }
+  .s-one {
+    top:10px;
+    right:4%
+  }
+  .s-two {
+    bottom:25px;
+    left:5%
+  }
+  .s-three {
+    right:2%;
+    top:47%
+  }
+  .section {
+    padding:54px 0
+  }
+  .section-head {
+    align-items:start;
+    flex-direction:column;
+    gap:9px
+  }
+  .ip-head {
+    flex-direction:column
+  }
+  .flow {
+    grid-template-columns:1fr
+  }
+  .bot-panel {
+    grid-template-columns:1fr
+  }
+  .bot-panel .btn {
+    justify-self:start
+  }
+  .faq {
+    grid-template-columns:1fr
+  }
+  .foot {
+    flex-direction:column
+  }
+  .free-banner {
+    align-items:flex-start;
+    flex-direction:column
+  }
+}
+@media(max-width:480px) {
+  .features,.downloads {
+    grid-template-columns:1fr
+  }
+  .feature {
+    min-height:0
+  }
+  .download-card {
+    min-height:190px
+  }
+  .hero-actions .btn {
+    flex:1 1 100%
+  }
+  .micro {
+    gap:10px
+  }
+  .sticker {
+    padding:8px 10px;
+    font-size:.75rem
+  }
+  .s-three {
+    right:-2%
+  }
+  .s-two {
+    left:-1%
+  }
+  .art {
+    min-height:320px
+  }
+  .orbit {
+    width:285px
+  }
+  .app-card {
+    width:225px
+  }
+  .dial {
+    width:135px;
+    height:135px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important
+  }
+}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#home" aria-label="Harmoney Pro">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h4.2l2-5 3.5 10 2.1-5H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.2" opacity=".55"/></svg></span>
+      <span>Harmoney <b>Pro</b></span>
+    </a>
+    <nav aria-label="ناوبری اصلی"><a href="#features" data-t="navFeatures">ویژگی‌ها</a><a href="#how" data-t="navHow">شروع کار</a><a href="#downloads" data-t="navDownload">دانلود</a><a href="#faq" data-t="navFaq">پرسش‌ها</a></nav>
+    <div class="nav-actions"><label class="sr-only" for="language">زبان</label><select class="lang" id="language" aria-label="زبان"><option value="fa">فارسی</option><option value="en">English</option></select><a class="btn btn-primary" href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer"><span data-t="buyTop">خرید اشتراک</span><span aria-hidden="true">↗</span></a></div>
+  </header>
+
+  <main id="home" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span><span data-t="eyebrow">یک تجربهٔ جمع‌وجور برای اتصال‌های تو</span></div>
+        <h1 id="hero-title" data-t-html="headline">اتصال‌هات را<br><span class="shine">یک‌جا مدیریت کن.</span></h1>
+        <p class="lead" data-t="lead">Harmoney Pro برای مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN در یک اپ ساخته شده؛ نسخهٔ دستگاهت را بگیر و از ربات رسمی برای خرید یا تمدید راهنمایی بگیر.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#downloads"><span data-t="downloadCta">دریافت Harmoney Pro</span><span aria-hidden="true">↓</span></a><a class="btn btn-quiet" href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.7 4.4 18.5 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.5 1.2 12c-1-.3-1-1 .2-1.5l18.8-7.2c.9-.3 1.7.2 1.5 1.1Z"/></svg><span data-t="botCta">ورود به ربات تلگرام</span></a></div>
+        <div class="micro"><span><b class="check">✓</b><span data-t="micro1">خروجی‌های رسمی و مستقیم</span></span><span><b class="check">✓</b><span data-t="micro2">خرید و تمدید از ربات</span></span></div>
+      </div>
+      <div class="art" aria-label="تصویر تزئینی Harmoney Pro">
+        <div class="orbit"></div><div class="halo"></div>
+        <div class="app-card"><div class="app-card-top"><span>HARMONEY / PRO</span><span class="status-pill"><i class="live-dot"></i><span data-t="demoStatus">آمادهٔ شروع</span></span></div><h2 data-t="demoTitle">اتصال امن، ساده</h2><p data-t="demoSubtitle">پروفایل‌ها و اشتراک‌ها در کنار هم</p><div class="dial"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 5 51 12v15c0 13.5-7.9 24.7-19 31C20.9 51.7 13 40.5 13 27V12L32 5Z" stroke="currentColor" stroke-width="3"/><path d="M22 32.5 28.5 39 42 24" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="app-card-foot"><span data-t="demoFootLeft">Harmoney Pro</span><span>✦ <span data-t="demoFootRight">آمادهٔ اتصال</span></span></div></div>
+        <div class="sticker s-one"><span>🛡️</span><span data-t="stickerOne">پرو، برای مسیر تو</span></div><div class="sticker s-two"><span>✨</span><span data-t="stickerTwo">همه‌چیز مرتب</span></div><div class="sticker s-three"><span>📲</span><span data-t="stickerThree">چند پلتفرم</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-head"><div><p class="kicker" data-t="featureKicker">چرا Harmoney Pro؟</p><h2 data-t="featureTitle">ابزارهای لازم، بدون شلوغی</h2></div><p data-t="featureIntro">یک محیط روشن برای مدیریت اتصال‌ها و دسترسی به اشتراک‌هایی که استفاده می‌کنی.</p></div>
+      <div class="features">
+        <article class="feature"><span class="feature-icon">🧭</span><h3 data-t="feature1Title">اشتراک‌ها در یک‌جا</h3><p data-t="feature1Text">اشتراک‌ها و پروفایل‌های سازگار را در برنامه اضافه و مدیریت کن؛ فایل‌های متداول مثل ‎.conf، ‎.ovpn، ‎.json و YAML پشتیبانی می‌شوند.</p></article>
+        <article class="feature"><span class="feature-icon">🪄</span><h3 data-t="feature2Title">انتخاب پروفایل دلخواه</h3><p data-t="feature2Text">پروفایل یا سرویس موردنظرت را از داخل برنامه انتخاب کن و وضعیت اتصال را همان‌جا ببین.</p></article>
+        <article class="feature"><span class="feature-icon">💻</span><h3 data-t="feature3Title">برای دستگاه‌های مختلف</h3><p data-t="feature3Text">نسخه‌های منتشرشده برای Android، Windows، Linux و macOS از همین صفحه شناسایی و نمایش داده می‌شوند.</p></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ip-title">
+      <div class="ip-section">
+        <div class="ip-head">
+          <div><p class="kicker" data-t="ipKicker">یک انتخاب ویژه</p><h2 id="ip-title" data-t="ipTitle">IP ثابت؛ وقتی یک آدرس خروجی مشخص لازم داری</h2><p data-t="ipIntro">برای افرادی که دسترسی کاری‌شان به یک IP قابل پیش‌بینی وابسته است، مثل اتصال راه‌دور یا سرویس‌هایی که IP را در فهرست مجاز ثبت می‌کنند.</p></div>
+          <span class="ip-sticker" data-t="ipSticker">📍 آدرس پایدار</span>
+        </div>
+        <div class="ip-uses"><div class="ip-use"><span>🧑‍💻</span><span data-t="ipUse1">دسترسی راه‌دور به محیط کار</span></div><div class="ip-use"><span>🗝️</span><span data-t="ipUse2">سرویس‌های دارای فهرست IP مجاز</span></div><div class="ip-use"><span>🖥️</span><span data-t="ipUse3">اتصال پیوسته به سرور و پنل مدیریت</span></div></div>
+        <p class="ip-note" data-t="ipNote">IP ثابت فقط در پلن‌هایی ارائه می‌شود که این گزینه در توضیحاتشان درج شده باشد؛ موجودی، موقعیت و شرایط را پیش از خرید در ربات بررسی کن.</p>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-head"><div><p class="kicker" data-t="howKicker">شروع کار</p><h2 data-t="howTitle">از انتخاب تا اتصال، سه قدم</h2></div><p data-t="howIntro">خرید و پیوند حساب از مسیر رسمی انجام می‌شود؛ برای راهنمایی هم ربات در دسترس است.</p></div>
+      <div class="flow"><article class="step"><h3 data-t="step1Title">نسخهٔ مناسب را بگیر</h3><p data-t="step1Text">سیستم‌عاملت را در بخش دانلود انتخاب کن و فایل رسمی منتشرشده را دریافت کن.</p></article><article class="step"><h3 data-t="step2Title">از ربات شروع کن</h3><p data-t="step2Text">در گفت‌وگوی خصوصی ربات، گزینهٔ اشتراک را دنبال کن و شمارهٔ تلگرامت را با دکمهٔ رسمی ربات تأیید کن.</p></article><article class="step"><h3 data-t="step3Title">حساب را به برنامه پیوند بده</h3><p data-t="step3Text">در Harmoney Pro گزینهٔ پیوند تلگرام را بزن و مراحل نمایش‌داده‌شده را کامل کن؛ سپس اشتراک‌های فعال را در برنامه ببین.</p></article></div>
+    </section>
+
+    <section class="section" aria-labelledby="bot-title"><div class="bot-panel"><div><span class="bot-tag" data-t="botTag">ربات رسمی هارمونی</span><h2 id="bot-title" data-t="botTitle">خرید، تمدید و پیگیری اشتراک از تلگرام</h2><p data-t="botText">برای دیدن پلن‌ها و مبلغ روز، خرید یا تمدید را از ربات انجام بده. وضعیت اشتراک و پرداخت‌ها هم از همان گفت‌وگو قابل پیگیری است. ربات برای ورود به حساب، رمز عبور Harmoney را از تو نمی‌خواهد.</p></div><a class="btn btn-primary" href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.7 4.4 18.5 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.5 1.2 12c-1-.3-1-1 .2-1.5l18.8-7.2c.9-.3 1.7.2 1.5 1.1Z"/></svg><span data-t="openBot">باز کردن ربات</span><span aria-hidden="true">↗</span></a></div></section>
+
+    <section class="section" id="downloads">
+      <div class="section-head"><div><p class="kicker" data-t="downloadKicker">دریافت نسخه</p><h2 data-t="downloadTitle">نسخهٔ دستگاهت را انتخاب کن</h2></div><p id="release-status" aria-live="polite" data-t="loading">در حال بررسی تازه‌ترین نسخهٔ Pro…</p></div>
+      <div class="downloads">
+        <article class="download-card" data-platform="android"><div class="download-top"><span class="os-icon">A</span><span class="os-tag" data-t="androidTag">موبایل و تبلت</span></div><h3>Android</h3><p data-t="androidText">فایل نصب APK برای دستگاه‌های Android.</p><a class="download-link disabled" href="#" aria-disabled="true"><span data-t="loadingShort">در حال بررسی…</span></a></article>
+        <article class="download-card" data-platform="windows"><div class="download-top"><span class="os-icon">⊞</span><span class="os-tag" data-t="desktopTag">رایانه</span></div><h3>Windows</h3><p data-t="windowsText">نصاب رسمی Windows، در صورت انتشار.</p><a class="download-link disabled" href="#" aria-disabled="true"><span data-t="loadingShort">در حال بررسی…</span></a></article>
+        <article class="download-card" data-platform="linux"><div class="download-top"><span class="os-icon">🐧</span><span class="os-tag" data-t="desktopTag">رایانه</span></div><h3>Linux</h3><p data-t="linuxText">بستهٔ ‎.deb یا آرشیو Linux، در صورت انتشار.</p><a class="download-link disabled" href="#" aria-disabled="true"><span data-t="loadingShort">در حال بررسی…</span></a></article>
+        <article class="download-card" data-platform="macos"><div class="download-top"><span class="os-icon">⌘</span><span class="os-tag" data-t="desktopTag">رایانه</span></div><h3>macOS</h3><p data-t="macText">نسخهٔ macOS، در صورت انتشار.</p><a class="download-link disabled" href="#" aria-disabled="true"><span data-t="loadingShort">در حال بررسی…</span></a></article>
+      </div>
+      <div class="release-meta"><span data-t="releaseLabel">نسخهٔ فعلی:</span> <strong id="release-version">—</strong><span aria-hidden="true">·</span><a id="checksums-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases" target="_blank" rel="noopener noreferrer" data-t="allReleases">همهٔ فایل‌ها و هش‌ها</a><span id="published-at"></span></div>
+      <div class="free-banner"><p><strong data-t="freeTitle">دنبال نسخهٔ رایگان هستی؟</strong> <span data-t="freeText">نسخهٔ Harmoney Free را از صفحهٔ انتشارهای رسمی بگیر.</span></p><a href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/latest" target="_blank" rel="noopener noreferrer"><span data-t="freeCta">دریافت Harmoney Free</span> ↗</a></div>
+    </section>
+
+    <section class="section" id="faq"><div class="section-head"><div><p class="kicker" data-t="faqKicker">پرسش‌های کوتاه</p><h2 data-t="faqTitle">قبل از دانلود</h2></div></div><div class="faq">
+      <details><summary data-t="faq1Q">فایل‌های Pro از کجا می‌آیند؟</summary><p data-t="faq1A">این صفحه Releaseهای Pro را از مخزن عمومی رسمی هارمونی می‌خواند. فایل‌ها فقط وقتی نمایش داده می‌شوند که برای آن پلتفرم در Release منتشر شده باشند.</p></details>
+      <details><summary data-t="faq2Q">چطور اشتراک بخرم یا تمدید کنم؟</summary><p data-t="faq2A">ربات رسمی را باز کن و گزینه‌های خرید یا تمدید را دنبال کن. مبلغ و جزئیات پرداخت در همان فرایند نمایش داده می‌شود.</p></details>
+      <details><summary data-t="faq3Q">بعد از خرید چطور وارد اپ شوم؟</summary><p data-t="faq3A">حساب تلگرام را در برنامه پیوند بده و شمارهٔ متعلق به حساب را با دکمهٔ رسمی ربات تأیید کن.</p></details>
+      <details><summary data-t="faq4Q">اگر دانلود شروع نشد چه کنم؟</summary><p data-t="faq4A">صفحهٔ همهٔ Releaseهای Pro را باز کن یا از ربات تلگرام برای راهنمایی کمک بگیر.</p></details>
+    </div></section>
+  </main>
+
+  <footer class="wrap foot"><span data-t="footer">Harmoney Pro · دریافت از منبع رسمی</span><div class="foot-links"><a href="https://github.com/harmoneyvpn/Harmoney-VPN" target="_blank" rel="noopener noreferrer" data-t="githubLink">مخزن عمومی هارمونی</a><a href="https://t.me/harmoneyvpn_bot" target="_blank" rel="noopener noreferrer" data-t="supportLink">ربات و راهنما</a><a href="#home" data-t="backTop">بازگشت به بالا ↑</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const repo = "harmoneyvpn/Harmoney-VPN";
+    const releasesUrl = `https://api.github.com/repos/${repo}/releases?per_page=100`;
+    const repoReleasePage = `https://github.com/${repo}/releases`;
+    const copy = {
+      fa:{navFeatures:"ویژگی‌ها",navHow:"شروع کار",navDownload:"دانلود",navFaq:"پرسش‌ها",buyTop:"خرید اشتراک",eyebrow:"یک تجربهٔ جمع‌وجور برای اتصال‌های تو",headline:'اتصال‌هات را<br><span class="shine">یک‌جا مدیریت کن.</span>',lead:"Harmoney Pro برای مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN در یک اپ ساخته شده؛ نسخهٔ دستگاهت را بگیر و از ربات رسمی برای خرید یا تمدید راهنمایی بگیر.",downloadCta:"دریافت Harmoney Pro",botCta:"ورود به ربات تلگرام",micro1:"خروجی‌های رسمی و مستقیم",micro2:"خرید و تمدید از ربات",demoStatus:"آمادهٔ شروع",demoTitle:"اتصال، ساده‌تر",demoSubtitle:"پروفایل‌ها و اشتراک‌ها در کنار هم",demoFootLeft:"Harmoney Pro",demoFootRight:"آمادهٔ اتصال",stickerOne:"پرو، برای مسیر تو",stickerTwo:"همه‌چیز مرتب",stickerThree:"چند پلتفرم",featureKicker:"چرا Harmoney Pro؟",featureTitle:"ابزارهای لازم، بدون شلوغی",featureIntro:"یک محیط روشن برای مدیریت اتصال‌ها و دسترسی به اشتراک‌هایی که استفاده می‌کنی.",feature1Title:"اشتراک‌ها در یک‌جا",feature1Text:"اشتراک‌ها و پروفایل‌های سازگار را در برنامه اضافه و مدیریت کن؛ فایل‌های متداول مثل ‎.conf، ‎.ovpn، ‎.json و YAML پشتیبانی می‌شوند.",feature2Title:"انتخاب پروفایل دلخواه",feature2Text:"پروفایل یا سرویس موردنظرت را از داخل برنامه انتخاب کن و وضعیت اتصال را همان‌جا ببین.",feature3Title:"برای دستگاه‌های مختلف",feature3Text:"نسخه‌های منتشرشده برای Android، Windows، Linux و macOS از همین صفحه شناسایی و نمایش داده می‌شوند.",ipKicker:"یک انتخاب ویژه",ipTitle:"IP ثابت؛ وقتی یک آدرس خروجی مشخص لازم داری",ipIntro:"برای افرادی که دسترسی کاری‌شان به یک IP قابل پیش‌بینی وابسته است؛ مثل اتصال راه‌دور یا سرویس‌هایی که IP را در فهرست مجاز ثبت می‌کنند.",ipSticker:"📍 آدرس پایدار",ipUse1:"دسترسی راه‌دور به محیط کار",ipUse2:"سرویس‌های دارای فهرست IP مجاز",ipUse3:"اتصال پیوسته به سرور و پنل مدیریت",ipNote:"IP ثابت فقط در پلن‌هایی ارائه می‌شود که این گزینه در توضیحاتشان درج شده باشد؛ موجودی، موقعیت و شرایط را پیش از خرید در ربات بررسی کن.",howKicker:"شروع کار",howTitle:"از انتخاب تا اتصال، سه قدم",howIntro:"خرید و پیوند حساب از مسیر رسمی انجام می‌شود؛ برای راهنمایی هم ربات در دسترس است.",step1Title:"نسخهٔ مناسب را بگیر",step1Text:"سیستم‌عاملت را در بخش دانلود انتخاب کن و فایل رسمی منتشرشده را دریافت کن.",step2Title:"از ربات شروع کن",step2Text:"در گفت‌وگوی خصوصی ربات، گزینهٔ اشتراک را دنبال کن و شمارهٔ تلگرامت را با دکمهٔ رسمی ربات تأیید کن.",step3Title:"حساب را به برنامه پیوند بده",step3Text:"در Harmoney Pro گزینهٔ پیوند تلگرام را بزن و مراحل نمایش‌داده‌شده را کامل کن؛ سپس اشتراک‌های فعال را در برنامه ببین.",botTag:"ربات رسمی هارمونی",botTitle:"خرید، تمدید و پیگیری اشتراک از تلگرام",botText:"برای دیدن پلن‌ها و مبلغ روز، خرید یا تمدید را از ربات انجام بده. وضعیت اشتراک و پرداخت‌ها هم از همان گفت‌وگو قابل پیگیری است. ربات برای ورود به حساب، رمز عبور Harmoney را از تو نمی‌خواهد.",openBot:"باز کردن ربات",downloadKicker:"دریافت نسخه",downloadTitle:"نسخهٔ دستگاهت را انتخاب کن",loading:"در حال بررسی تازه‌ترین نسخهٔ Pro…",androidTag:"موبایل و تبلت",desktopTag:"رایانه",androidText:"فایل نصب APK برای دستگاه‌های Android.",windowsText:"نصاب رسمی Windows، در صورت انتشار.",linuxText:"بستهٔ ‎.deb یا آرشیو Linux، در صورت انتشار.",macText:"نسخهٔ macOS، در صورت انتشار.",loadingShort:"در حال بررسی…",releaseLabel:"نسخهٔ فعلی:",allReleases:"همهٔ فایل‌ها و هش‌ها",freeTitle:"دنبال نسخهٔ رایگان هستی؟",freeText:"نسخهٔ Harmoney Free را از صفحهٔ انتشارهای رسمی بگیر.",freeCta:"دریافت Harmoney Free",faqKicker:"پرسش‌های کوتاه",faqTitle:"قبل از دانلود",faq1Q:"فایل‌های Pro از کجا می‌آیند؟",faq1A:"این صفحه Releaseهای Pro را از مخزن عمومی رسمی هارمونی می‌خواند. فایل‌ها فقط وقتی نمایش داده می‌شوند که برای آن پلتفرم در Release منتشر شده باشند.",faq2Q:"چطور اشتراک بخرم یا تمدید کنم؟",faq2A:"ربات رسمی را باز کن و گزینه‌های خرید یا تمدید را دنبال کن. مبلغ و جزئیات پرداخت در همان فرایند نمایش داده می‌شود.",faq3Q:"بعد از خرید چطور وارد اپ شوم؟",faq3A:"حساب تلگرام را در برنامه پیوند بده و شمارهٔ متعلق به حساب را با دکمهٔ رسمی ربات تأیید کن.",faq4Q:"اگر دانلود شروع نشد چه کنم؟",faq4A:"صفحهٔ همهٔ Releaseهای Pro را باز کن یا از ربات تلگرام برای راهنمایی کمک بگیر.",footer:"Harmoney Pro · دریافت از منبع رسمی",githubLink:"مخزن عمومی هارمونی",supportLink:"ربات و راهنما",backTop:"بازگشت به بالا ↑",fetchError:"نسخه‌ها بارگذاری نشدند؛ از صفحهٔ همهٔ انتشارها استفاده کن.",notPublished:"هنوز فایلی برای این سیستم‌عامل منتشر نشده",download:"دانلود نسخهٔ Pro",downloadFor:"دریافت",published:"انتشار:",copied:"پیوند کپی شد"},
+      en:{navFeatures:"Features",navHow:"Get started",navDownload:"Downloads",navFaq:"FAQ",buyTop:"Get a plan",eyebrow:"A clearer home for your connections",headline:'Your connections,<br><span class="shine">all in one place.</span>',lead:"Harmoney Pro helps you manage compatible VPN subscriptions and profiles in one app. Choose a build for your device and use the official bot for purchase or renewal.",downloadCta:"Get Harmoney Pro",botCta:"Open Telegram bot",micro1:"Official release files",micro2:"Plans and renewals in the bot",demoStatus:"Ready to start",demoTitle:"A simpler connection",demoSubtitle:"Profiles and subscriptions together",demoFootLeft:"Harmoney Pro",demoFootRight:"Ready to connect",stickerOne:"Pro for your route",stickerTwo:"Neatly organized",stickerThree:"Multiple platforms",featureKicker:"Why Harmoney Pro",featureTitle:"The tools you need, in one place",featureIntro:"A clear workspace to manage connections and the subscriptions you use.",feature1Title:"Subscriptions together",feature1Text:"Add and manage compatible subscriptions and profiles. Common formats such as .conf, .ovpn, .json, and YAML are supported.",feature2Title:"Choose a profile",feature2Text:"Select a profile or service in the app and check its connection status there.",feature3Title:"For different devices",feature3Text:"This page detects and lists published builds for Android, Windows, Linux, and macOS.",ipKicker:"A dedicated option",ipTitle:"A fixed IP, when you need a consistent exit address",ipIntro:"Useful for people whose work access depends on a predictable IP, such as remote connections or services that use IP allowlists.",ipSticker:"📍 Consistent address",ipUse1:"Remote access to work systems",ipUse2:"Services with IP allowlists",ipUse3:"Ongoing access to servers and admin panels",ipNote:"A fixed IP is available only on plans that explicitly include it. Check availability, location, and terms in the bot before purchase.",howKicker:"Get started",howTitle:"Three steps from download to setup",howIntro:"Purchases and account linking use the official flow; the bot can guide you.",step1Title:"Get your build",step1Text:"Choose your operating system in downloads and get its official published file.",step2Title:"Start with the bot",step2Text:"In the bot's private chat, follow the subscription prompts and verify your Telegram number with its official button.",step3Title:"Link your account",step3Text:"Choose Link Telegram in Harmoney Pro and follow the steps. Your active subscriptions will then appear in the app.",botTag:"Official Harmoney bot",botTitle:"Buy, renew, and check your subscription in Telegram",botText:"Open the bot to view current plans and prices, purchase or renew, and check payment status. The bot never asks for your Harmoney password.",openBot:"Open the bot",downloadKicker:"Downloads",downloadTitle:"Choose your device",loading:"Checking the latest Pro release…",androidTag:"Phone and tablet",desktopTag:"Desktop",androidText:"Android APK installer.",windowsText:"Official Windows installer, when published.",linuxText:"Linux .deb package or archive, when published.",macText:"macOS build, when published.",loadingShort:"Checking…",releaseLabel:"Current version:",allReleases:"All files and checksums",freeTitle:"Looking for the free edition?",freeText:"Get Harmoney Free from the official releases page.",freeCta:"Get Harmoney Free",faqKicker:"Quick answers",faqTitle:"Before you download",faq1Q:"Where do Pro files come from?",faq1A:"This page reads Pro releases from Harmoney's official public repository. A file appears only after it is published for that platform.",faq2Q:"How do I buy or renew?",faq2A:"Open the official bot and follow the purchase or renewal prompts. The amount and payment details are shown in that flow.",faq3Q:"How do I sign in after purchase?",faq3A:"Link your Telegram account in the app and verify the number belonging to that account with the bot's official button.",faq4Q:"What if a download does not start?",faq4A:"Open the page listing all Pro releases or ask the Telegram bot for help.",footer:"Harmoney Pro · Official downloads",githubLink:"Harmoney public repository",supportLink:"Bot and help",backTop:"Back to top ↑",fetchError:"Could not load releases. Use the all releases page.",notPublished:"No file has been published for this system yet",download:"Download Pro",downloadFor:"Get",published:"Published:",copied:"Link copied"}
+    };
+    let language = "fa";
+    const cards = [...document.querySelectorAll("[data-platform]")];
+    const platformKeys = Object.keys(copy.fa);
+    function setLanguage(next){language=copy[next]?next:"fa";const t=copy[language];document.documentElement.lang=language;document.documentElement.dir=language==="fa"?"rtl":"ltr";document.getElementById("language").value=language;document.title=language==="fa"?"Harmoney Pro | دانلود رسمی":"Harmoney Pro | Official downloads";document.querySelectorAll("[data-t]").forEach(el=>{const value=t[el.dataset.t];if(value)el.textContent=value});document.querySelectorAll("[data-t-html]").forEach(el=>{const value=t[el.dataset.tHtml];if(value)el.innerHTML=value});cards.forEach(card=>{const link=card.querySelector(".download-link");if(link.dataset.url){link.textContent=t.download;}});}
+    document.getElementById("language").addEventListener("change",event=>setLanguage(event.target.value));
+    function semver(tag){const m=tag.match(/^pro-v(\d+)\.(\d+)\.(\d+)(?:[-+.]?([\w.-]+))?$/i);return m?[Number(m[1]),Number(m[2]),Number(m[3]),m[4]||""]:null}
+    function compareRelease(a,b){const av=semver(a.tag_name),bv=semver(b.tag_name);for(let i=0;i<3;i++)if(av[i]!==bv[i])return bv[i]-av[i];if(av[3]!==bv[3])return av[3]?1:-1;return new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at)}
+    function assetFor(assets,patterns){return assets.find(a=>patterns.some(p=>p.test(a.name)))}
+    function setCard(platform,asset){const card=document.querySelector(`[data-platform="${platform}"]`);const link=card.querySelector(".download-link");const t=copy[language];if(asset){link.href=asset.browser_download_url;link.target="_blank";link.rel="noopener noreferrer";link.classList.remove("disabled");link.removeAttribute("aria-disabled");link.dataset.url=asset.browser_download_url;link.textContent=`${t.download} · ${humanSize(asset.size)}`;link.setAttribute("aria-label",`${t.download} ${card.querySelector("h3").textContent}: ${asset.name}`)}else{link.href=repoReleasePage;link.target="_blank";link.rel="noopener noreferrer";link.classList.add("disabled");link.removeAttribute("aria-disabled");link.dataset.url="";link.textContent=t.notPublished;link.title=t.notPublished}}
+    function humanSize(bytes){if(!bytes)return"";const mb=bytes/1048576;return `${mb<10?mb.toFixed(1):Math.round(mb)} MB`}
+    async function loadReleases(){const status=document.getElementById("release-status");try{const response=await fetch(releasesUrl,{headers:{Accept:"application/vnd.github+json"}});if(!response.ok)throw new Error(`GitHub API ${response.status}`);const list=await response.json();const release=list.filter(r=>r.tag_name&&semver(r.tag_name)).sort(compareRelease)[0];if(!release)throw new Error("No Pro release found");const assets=release.assets||[];document.getElementById("release-version").textContent=release.tag_name.replace(/^pro-v/i,"v");document.getElementById("checksums-link").href=release.html_url;const checksum=assetFor(assets,[/^SHA256SUMS\.txt$/i,/checksums?.*\.txt$/i]);if(checksum)document.getElementById("checksums-link").href=checksum.browser_download_url;const date=release.published_at||release.created_at;if(date){const d=new Date(date);document.getElementById("published-at").textContent=`${copy[language].published} ${new Intl.DateTimeFormat(language==="fa"?"fa-IR":"en-US",{dateStyle:"medium"}).format(d)}`}const match={android:assetFor(assets,[/universal.*\.apk$/i,/\.apk$/i]),windows:assetFor(assets,[/\.exe$/i,/\.msi$/i,/windows.*\.zip$/i]),linux:assetFor(assets,[/\.deb$/i,/\.appimage$/i,/linux.*\.tar\.gz$/i]),macos:assetFor(assets,[/\.dmg$/i,/\.pkg$/i,/macos.*\.zip$/i])};Object.entries(match).forEach(([key,asset])=>setCard(key,asset));status.textContent=release.name||release.tag_name;status.dataset.loaded="true";}catch(error){console.error("Unable to load Harmoney Pro releases",error);status.textContent=copy[language].fetchError;cards.forEach(card=>setCard(card.dataset.platform,null));}}
+    setLanguage(language);loadReleases();
+  </script>
+</body>
+</html>

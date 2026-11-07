@@ -1,0 +1,7 @@
+geoip-ir.dat is an unmodified copy of geoip-lite.dat from
+https://github.com/Chocolate4U/Iran-v2ray-rules (release branch).
+SHA-256 at packaging: 4a077e350bbef4584b5d5327d3eb14fd975b435ae4650a45179ac76a5fd7fc4b
+The upstream compilation is GPL-3.0; component sources have their own licenses.
+The GPL-3.0 license is packaged as GPL-3.0-Iran-v2ray-rules.txt.
+See https://github.com/Chocolate4U/Iran-v2ray-rules/blob/main/LICENSE
+and the upstream README's Sources section for source-specific attributions.

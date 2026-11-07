@@ -1,0 +1,9 @@
+firetunnel
+*.log
+.env
+.idea/
+.vscode/
+!cmd/
+!cmd/firetunnel/
+!cmd/firetunnel/*.go
+

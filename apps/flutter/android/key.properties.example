@@ -1,0 +1,7 @@
+# Copy to key.properties (already ignored by Git) and replace every value.
+# Use the same Harmoney release key for Free and Pro when their applicationId matches.
+# Keep the keystore outside the repository or in a protected CI secret store.
+storeFile=/absolute/path/to/harmoney-release.jks
+storePassword=REPLACE_WITH_PRIVATE_STORE_PASSWORD
+keyAlias=harmoney-release
+keyPassword=REPLACE_WITH_PRIVATE_KEY_PASSWORD

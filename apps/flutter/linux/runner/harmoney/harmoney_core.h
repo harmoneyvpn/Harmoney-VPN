@@ -1,0 +1,37 @@
+#pragma once
+
+#include <string>
+#include <functional>
+
+namespace harmoney_core {
+// Simple logger to help with debugging native code. Writes to a log file next
+// to the executable.
+void LogMessage(const std::string& msg);
+
+bool StartVPN(const std::string& cacheDir, const std::string& flowLine, const std::string& pattern, bool deepScan = false, bool healthCheck = false);
+bool StopVPN();
+void StartTun2Socks(long long fd, const std::string& addr);
+void StopTun2Socks();
+void Stop();
+long long MeasurePing();
+std::string GetFlag();
+void SetAsnName();
+void SetTimeZone(float tz);
+std::string GetFlowLine(bool isTest = false);
+std::string GetCachedFlowLine();
+std::string DecodeAndVerifyFlowline(const std::string& flowLine);
+std::string GetVpnStatus();
+void SetConnectionMethod(const std::string& method);
+void SetCacheDir(const std::string& cacheDir);
+bool IsTunnelRunning();
+
+// Shared library callback and logging setup
+void EnableVerboseLogs(bool enable);
+void RegisterProgressHandler(std::function<void(std::string)> handler);
+
+// Attempts to load the libdxcore_amd64.so from the given path. If path is empty, tries
+// to locate libdxcore_amd64.so next to the running executable or in application folder.
+// Returns true if the shared library was loaded and entrypoints found.
+bool LoadCoreDll(const std::string& dllPath = "");
+void UnloadCoreDll();
+} // namespace harmoney_core

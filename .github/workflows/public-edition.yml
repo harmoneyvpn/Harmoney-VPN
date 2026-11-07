@@ -1,0 +1,127 @@
+name: Harmoney Community builds
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/flutter/**'
+      - 'packages/**'
+      - '.github/workflows/public-edition.yml'
+  pull_request:
+    paths:
+      - 'apps/flutter/**'
+      - 'packages/**'
+      - '.github/workflows/public-edition.yml'
+
+jobs:
+  android:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Android release signing
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          test -n "$ANDROID_KEYSTORE_BASE64"
+          test -n "$ANDROID_STORE_PASSWORD"
+          test -n "$ANDROID_KEY_PASSWORD"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/harmoney-free-upload.jks"
+          cat > apps/flutter/android/key.properties <<EOF
+          storeFile=$RUNNER_TEMP/harmoney-free-upload.jks
+          storePassword=$ANDROID_STORE_PASSWORD
+          keyAlias=harmoney-free-upload
+          keyPassword=$ANDROID_KEY_PASSWORD
+          EOF
+          chmod 600 apps/flutter/android/key.properties "$RUNNER_TEMP/harmoney-free-upload.jks"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - working-directory: apps/flutter
+        run: flutter pub get
+      - working-directory: apps/flutter
+        run: flutter build apk --release --obfuscate --split-debug-info="$RUNNER_TEMP/flutter-symbols"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: harmoney-community-android
+          path: apps/flutter/build/app/outputs/flutter-apk/app-release.apk
+      - working-directory: apps/flutter
+        run: flutter build apk --release --split-per-abi --obfuscate --split-debug-info="$RUNNER_TEMP/flutter-symbols"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: harmoney-community-android-splits
+          path: |
+            apps/flutter/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+            apps/flutter/build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+            apps/flutter/build/app/outputs/flutter-apk/app-x86_64-release.apk
+
+  linux:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Flutter Linux dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev libayatana-appindicator3-dev liblzma-dev libstdc++-12-dev librsvg2-bin libfuse2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - working-directory: apps/flutter
+        run: flutter pub get
+      - working-directory: apps/flutter
+        run: flutter build linux --release --obfuscate --split-debug-info="$RUNNER_TEMP/flutter-symbols"
+      - name: Package Linux installers
+        working-directory: apps/flutter
+        run: |
+          version="$(sed -n 's/^version: \([^+]*\).*/\1/p' pubspec.yaml)"
+          bash linux/packaging/build-packages.sh build/linux/x64/release/bundle "$version" build/linux/x64/release/installers
+      - uses: actions/upload-artifact@v4
+        with:
+          name: harmoney-community-linux
+          path: apps/flutter/build/linux/x64/release/bundle/**
+      - uses: actions/upload-artifact@v4
+        with:
+          name: harmoney-community-linux-installers
+          path: |
+            apps/flutter/build/linux/x64/release/installers/*.deb
+            apps/flutter/build/linux/x64/release/installers/*.AppImage
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - working-directory: apps/flutter
+        run: flutter pub get
+      - working-directory: apps/flutter
+        run: flutter build windows --release --obfuscate --split-debug-info="$env:RUNNER_TEMP/flutter-symbols"
+      - name: Install Inno Setup
+        run: choco install innosetup --yes --no-progress
+      - name: Build Windows installer
+        working-directory: apps/flutter
+        shell: pwsh
+        run: |
+          $version = (Get-Content pubspec.yaml | Select-String '^version: ').ToString().Split(':')[1].Trim().Split('+')[0]
+          $iscc = Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6\ISCC.exe'
+          & $iscc "/DMyAppVersion=$version" windows/installer/HarmoneyCommunity.iss
+      - uses: actions/upload-artifact@v4
+        with:
+          name: harmoney-community-windows
+          path: apps/flutter/build/windows/x64/runner/Release/**
+      - uses: actions/upload-artifact@v4
+        with:
+          name: harmoney-community-windows-installer
+          if-no-files-found: error
+          path: apps/flutter/build/windows/x64/runner/HarmoneyVPN-*-windows-x64-setup.exe

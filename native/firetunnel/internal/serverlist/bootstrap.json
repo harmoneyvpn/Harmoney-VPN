@@ -1,0 +1,9 @@
+[
+  {"name":"Recomended Location","code":"REC","cities":[{"name":"Recomended City","code":"REC","servers":[{"hostname":"p.m1.fastly-masque.net","port":2499,"quarantined":false,"protocols":[{"name":"connect","host":"p.m1.fastly-masque.net","port":2499,"scheme":"https"}]}]}]},
+  {"name":"CatchAll Anycast","code":"US","cities":[{"name":"USA","code":"Q30","servers":[{"hostname":"p.m1.fastly-masque.net","port":2499,"quarantined":false,"protocols":[{"name":"connect","host":"p.m1.fastly-masque.net","port":2499,"scheme":"https"}]}]}]},
+  {"name":"Germany","code":"DE","cities":[{"name":"Munich","code":"MUC","servers":[{"hostname":"muc139.m1.fastly-masque.net","port":2499,"quarantined":false,"protocols":[{"name":"connect","host":"muc139.m1.fastly-masque.net","port":2499,"scheme":"https"}]}]}]},
+  {"name":"France","code":"FR","cities":[{"name":"Paris","code":"LFPB","servers":[{"hostname":"lfpb115.m1.fastly-masque.net","port":2499,"quarantined":false,"protocols":[{"name":"connect","host":"lfpb115.m1.fastly-masque.net","port":2499,"scheme":"https"}]}]}]},
+  {"name":"Canada","code":"CA","cities":[{"name":"Toronto","code":"YYZ","servers":[{"hostname":"yyz45.m1.fastly-masque.net","port":2499,"quarantined":false,"protocols":[{"name":"connect","host":"yyz45.m1.fastly-masque.net","port":2499,"scheme":"https"}]}]}]},
+  {"name":"United Kingdom","code":"GB","cities":[{"name":"London","code":"EGLC","servers":[{"hostname":"eglc860.m1.fastly-masque.net","port":2499,"quarantined":true,"protocols":[{"name":"connect","host":"eglc860.m1.fastly-masque.net","port":2499,"scheme":"https"}]}]}]}
+]
+

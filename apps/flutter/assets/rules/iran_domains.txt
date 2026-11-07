@@ -1,0 +1,13 @@
+﻿# Official Islamic Azad University and student-service hostnames.
+# Resolve these names immediately before connecting; never bypass every .ir domain.
+iau.ir
+stdn.iau.ir
+stdn2.iau.ir
+eserv.iau.ir
+saha.iau.ir
+azmoon.org
+azmoon.iau.ir
+vadamap.iauec.ac.ir
+saamed.iau.ir
+monada.iau.ir
+kateb.iau.ir
