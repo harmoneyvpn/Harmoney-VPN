@@ -763,6 +763,36 @@ h1 {
   text-align:center;
   font-size:.8rem
 }
+.linux-downloads {
+  margin-top:16px;
+  padding:16px;
+  border:1px solid #ffffff1b;
+  border-radius:18px;
+  background:#ffffff08
+}
+.linux-heading {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin:0 0 12px;
+  font-size:.98rem
+}
+.linux-assets {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px
+}
+.linux-assets .download-link {
+  min-height:42px;
+  padding:8px 10px;
+  text-align:center;
+  font-size:.82rem
+}
+.pro .linux-assets .download-link {
+  border-color:#b69aff77;
+  color:#21123d;
+  background:linear-gradient(135deg,#e6d9ff,#b69aff)
+}
 .edition-meta {
   display:flex;
   flex-wrap:wrap;
@@ -800,7 +830,7 @@ h1 {
 }
 .soon-grid {
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:10px
 }
 .soon-card {
@@ -1063,6 +1093,9 @@ h1 {
   .abi-grid {
     gap:8px
   }
+  .linux-assets {
+    grid-template-columns:1fr
+  }
   .abi-card {
     padding:12px 10px
   }
@@ -1179,6 +1212,7 @@ h1 {
             <article class="abi-card"><span class="abi-symbol">x64</span><h4>x86_64</h4><p data-t="x64Text">تبلت‌ها و دستگاه‌های اندرویدی x86_64</p><a id="pro-x64" data-edition="pro" data-abi="x64" data-abi-label="x86_64" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/pro-v1.0.0/HarmoneyPro-Android-x86_64.apk" download data-t="downloadApk">دانلود APK</a></article>
             <article class="abi-card"><span class="abi-symbol">✦</span><h4 data-t="universalTitle">Universal</h4><p data-t="universalText">انتخاب پیشنهادی اگر معماری دستگاهت را نمی‌دانی</p><a id="pro-universal" data-edition="pro" data-abi="universal" data-abi-label="Universal" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/pro-v1.0.0/HarmoneyPro-Android-universal.apk" download data-t="downloadApk">دانلود APK</a></article>
           </div>
+          <section class="linux-downloads" aria-label="Harmoney Pro for Linux"><h4 class="linux-heading" data-t="linuxProTitle">🐧 نسخهٔ Linux پرو</h4><div class="linux-assets"><a id="pro-linux-deb" data-edition="pro" data-linux-kind="deb" data-label-key="linuxDeb" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/pro-v1.0.0/harmoney-pro_1.0.0_amd64.deb" download>دانلود بستهٔ ‎.deb</a><a id="pro-linux-archive" data-edition="pro" data-linux-kind="archive" data-label-key="linuxArchive" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/pro-v1.0.0/HarmoneyPro-Linux-x86_64.tar.gz" download>دانلود آرشیو ‎.tar.gz</a></div></section>
           <div class="edition-meta"><span data-t="releaseLabel">نسخهٔ منتشرشده:</span> <strong id="pro-release-name">Harmoney Pro 1.0.0</strong><span aria-hidden="true">·</span><a id="pro-release-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/tag/pro-v1.0.0" target="_blank" rel="noopener noreferrer" data-t="releaseDetails">جزئیات نسخه و همهٔ فایل‌ها</a></div>
         </article>
 
@@ -1193,11 +1227,12 @@ h1 {
             <article class="abi-card"><span class="abi-symbol">x64</span><h4>x86_64</h4><p data-t="x64Text">تبلت‌ها و دستگاه‌های اندرویدی x86_64</p><a id="free-x64" data-edition="free" data-abi="x64" data-abi-label="x86_64" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/v0.1.1/HarmoneyFree-Android-x86_64.apk" download data-t="downloadApk">دانلود APK</a></article>
             <article class="abi-card"><span class="abi-symbol">✦</span><h4 data-t="universalTitle">Universal</h4><p data-t="universalText">انتخاب پیشنهادی اگر معماری دستگاهت را نمی‌دانی</p><a id="free-universal" data-edition="free" data-abi="universal" data-abi-label="Universal" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/v0.1.1/HarmoneyFree-Android-universal.apk" download data-t="downloadApk">دانلود APK</a></article>
           </div>
+          <section class="linux-downloads" aria-label="Harmoney Free for Linux"><h4 class="linux-heading" data-t="linuxFreeTitle">🐧 نسخهٔ Linux رایگان</h4><div class="linux-assets"><a id="free-linux-deb" data-edition="free" data-linux-kind="deb" data-label-key="linuxDeb" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/v0.1.1/HarmoneyVPN-1.0.0-amd64.deb" download>دانلود بستهٔ ‎.deb</a><a id="free-linux-appimage" data-edition="free" data-linux-kind="appimage" data-label-key="linuxAppImage" class="download-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/download/v0.1.1/HarmoneyVPN-1.0.0-x86_64.AppImage" download>دانلود AppImage</a></div></section>
           <div class="edition-meta"><span data-t="releaseLabel">نسخهٔ منتشرشده:</span> <strong id="free-release-name">Harmoney Free 0.1.1</strong><span aria-hidden="true">·</span><a id="free-release-link" href="https://github.com/harmoneyvpn/Harmoney-VPN/releases/tag/v0.1.1" target="_blank" rel="noopener noreferrer" data-t="releaseDetails">جزئیات نسخه و همهٔ فایل‌ها</a></div>
         </article>
       </div>
       <p class="android-tip" data-t="androidTip">نمی‌دانی کدام فایل مناسب است؟ نسخهٔ Universal را انتخاب کن. برای نصب، فایل APK را باز و اجازهٔ نصب از این منبع را در تنظیمات اندروید فعال کن.</p>
-      <div class="soon-section"><h3 data-t="soonTitle">نسخه‌های دستگاه‌های دیگر هم در راه‌اند</h3><p data-t="soonText">فعلاً دانلود مستقیم این صفحه برای اندروید است؛ نسخه‌های بیشتر به‌زودی اضافه می‌شوند.</p><div class="soon-grid"><div class="soon-card"><strong>Windows</strong><span class="soon-badge" data-t="comingSoon">به‌زودی</span></div><div class="soon-card"><strong>Linux</strong><span class="soon-badge" data-t="comingSoon">به‌زودی</span></div><div class="soon-card"><strong>macOS</strong><span class="soon-badge" data-t="comingSoon">به‌زودی</span></div></div></div>
+      <div class="soon-section"><h3 data-t="soonTitle">نسخه‌های بیشتر در راه‌اند</h3><p data-t="soonText">نسخه‌های اندروید و Linux در دسترس‌اند؛ نسخه‌های بیشتر به‌زودی اضافه می‌شوند.</p><div class="soon-grid"><div class="soon-card"><strong>Windows</strong><span class="soon-badge" data-t="comingSoon">به‌زودی</span></div><div class="soon-card"><strong>macOS</strong><span class="soon-badge" data-t="comingSoon">به‌زودی</span></div></div></div>
       <p class="download-note" data-t="officialNote">فایل‌ها از انتشارهای رسمی Harmoney در GitHub دریافت می‌شوند. نسخه و نام فایل را پیش از نصب بررسی کن.</p>
     </section>
 
@@ -1229,7 +1264,7 @@ h1 {
       footer:"Harmoney VPN · دانلود رسمی Free و Pro", channelLink:"کانال تلگرام",
       androidIntro:"برای هر نسخه، فایل APK مناسب معماری گوشی یا تبلت اندرویدی‌ات را بردار.",
       feature3Title:"برای معماری‌های مختلف اندروید",
-      feature3Text:"برای هر نسخه چهار فایل APK داریم: ARM64، ARMv7، x86_64 و Universal. نسخه‌های دیگر دستگاه‌ها به‌زودی اضافه می‌شوند.",
+      feature3Text:"برای هر نسخه چهار فایل APK داریم: ARM64، ARMv7، x86_64 و Universal؛ نسخه‌های Linux هم برای هر دو edition آمادهٔ دریافت‌اند.",
       step1Text:"نسخهٔ Free یا Pro و فایل APK متناسب با دستگاه Android خودت را از بخش دانلود انتخاب کن.",
       proEditionTag:"✨ نسخهٔ حرفه‌ای", proEditionText:"مدیریت اشتراک‌ها و پروفایل‌های سازگار VPN؛ برای خرید یا تمدید اشتراک، ربات رسمی را ببین.",
       freeEditionTag:"🟢 نسخهٔ رایگان", freeEditionText:"نسخهٔ رایگان هارمونی؛ فایل سازگار با معماری اندرویدت را مستقیم بگیر.",
@@ -1239,8 +1274,10 @@ h1 {
       releaseDetails:"جزئیات نسخه و همهٔ فایل‌ها",
       androidTip:"نمی‌دانی کدام فایل مناسب است؟ نسخهٔ Universal را انتخاب کن. برای نصب، فایل APK را باز و اجازهٔ نصب از این منبع را در تنظیمات اندروید فعال کن.",
       soonTitle:"نسخه‌های دستگاه‌های دیگر هم در راه‌اند",
-      soonText:"فعلاً دانلود مستقیم این صفحه برای اندروید است؛ نسخه‌های بیشتر به‌زودی اضافه می‌شوند.",
+      soonText:"نسخه‌های اندروید و Linux در دسترس‌اند؛ نسخه‌های بیشتر به‌زودی اضافه می‌شوند.",
       comingSoon:"به‌زودی",
+      linuxProTitle:"🐧 نسخهٔ Linux پرو", linuxFreeTitle:"🐧 نسخهٔ Linux رایگان",
+      linuxDeb:"دریافت بستهٔ Linux ‎.deb", linuxArchive:"دریافت آرشیو ‎.tar.gz", linuxAppImage:"دریافت Linux AppImage",
       officialNote:"فایل‌ها از انتشارهای رسمی Harmoney در GitHub دریافت می‌شوند. نسخه و نام فایل را پیش از نصب بررسی کن.",
       abiFaqQ:"کدام فایل APK برای اندروید من مناسب است؟",
       abiFaqA:"اگر معماری دستگاه را نمی‌دانی Universal را بگیر. ARM64 برای بیشتر گوشی‌های جدید، ARMv7 برای دستگاه‌های ۳۲ بیتی و x86_64 برای دستگاه‌های اندرویدی با پردازندهٔ x86_64 است.",
@@ -1257,7 +1294,7 @@ h1 {
       footer:"Harmoney VPN · Official Free and Pro downloads", channelLink:"Telegram channel",
       androidIntro:"Pick the APK that matches your Android phone or tablet architecture.",
       feature3Title:"For Android architectures",
-      feature3Text:"Each edition has four APK builds: ARM64, ARMv7, x86_64, and Universal. More device platforms are coming soon.",
+      feature3Text:"Each edition has four APK builds: ARM64, ARMv7, x86_64, and Universal. Linux builds are also available for both editions.",
       step1Text:"Choose Harmoney Free or Pro, then select the APK build that matches your Android device.",
       proEditionTag:"✨ Pro edition", proEditionText:"Manage compatible VPN subscriptions and profiles. Visit the official bot to purchase or renew a plan.",
       freeEditionTag:"🟢 Free edition", freeEditionText:"The free Harmoney edition. Download the APK that matches your Android device.",
@@ -1267,8 +1304,10 @@ h1 {
       releaseDetails:"Release details and all files",
       androidTip:"Not sure which file to choose? Pick Universal. To install, open the APK and allow installs from this source in Android settings.",
       soonTitle:"More device platforms are on the way",
-      soonText:"Direct downloads on this page are currently for Android. More platform builds are coming soon.",
+      soonText:"Android and Linux downloads are available now. More platform builds are coming soon.",
       comingSoon:"Coming soon",
+      linuxProTitle:"🐧 Harmoney Pro for Linux", linuxFreeTitle:"🐧 Harmoney Free for Linux",
+      linuxDeb:"Get Linux .deb package", linuxArchive:"Get .tar.gz archive", linuxAppImage:"Get Linux AppImage",
       officialNote:"Files come from Harmoney's official GitHub releases. Check the version and file name before installing.",
       abiFaqQ:"Which Android APK should I download?",
       abiFaqA:"Choose Universal if you are unsure. ARM64 is for most modern phones, ARMv7 is for 32-bit devices, and x86_64 is for Android devices with x86_64 processors.",
@@ -1284,6 +1323,10 @@ h1 {
       armv7: /Android-armeabi-v7a\.apk$/i,
       x64: /Android-x86_64\.apk$/i,
       universal: /Android-universal\.apk$/i
+    };
+    const linuxPatterns = {
+      pro: { deb: /\.deb$/i, archive: /Linux-x86_64\.tar\.gz$/i },
+      free: { deb: /amd64\.deb$/i, appimage: /x86_64\.AppImage$/i }
     };
     const releaseLinkFor = edition => document.getElementById(edition + "-release-link");
     const releaseVersionFor = edition => document.getElementById(edition + "-version");
@@ -1310,6 +1353,7 @@ h1 {
         if (value) element.innerHTML = value;
       });
       document.querySelectorAll("[data-edition][data-abi]").forEach(renderApkLabel);
+      document.querySelectorAll("[data-linux-kind]").forEach(renderLinuxLabel);
     }
 
     document.getElementById("language").addEventListener("change", event => setLanguage(event.target.value));
@@ -1344,6 +1388,35 @@ h1 {
       link.textContent = label + " · " + (link.dataset.abiLabel || link.dataset.abi.toUpperCase()) + size;
     }
 
+    function renderLinuxLabel(link) {
+      const label = copy[language][link.dataset.labelKey];
+      const size = link.dataset.size ? " · " + humanSize(Number(link.dataset.size)) : "";
+      link.textContent = label + size;
+    }
+
+    function setLinuxLink(edition, kind, asset) {
+      const link = document.getElementById(edition + "-linux-" + kind);
+      if (!asset) {
+        link.href = releaseLinkFor(edition).href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.classList.add("disabled");
+        link.setAttribute("aria-disabled", "true");
+        link.dataset.size = "";
+        link.title = copy[language].notPublished;
+        renderLinuxLabel(link);
+        return;
+      }
+      link.href = asset.browser_download_url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.classList.remove("disabled");
+      link.removeAttribute("aria-disabled");
+      link.dataset.size = String(asset.size || "");
+      link.title = asset.name;
+      renderLinuxLabel(link);
+    }
+
     function setApkLink(edition, abi, asset) {
       const link = document.getElementById(edition + "-" + abi);
       if (!asset) {
@@ -1376,6 +1449,10 @@ h1 {
       for (const [abi, pattern] of Object.entries(abiPatterns)) {
         const asset = (release.assets || []).find(item => pattern.test(item.name));
         setApkLink(edition, abi, asset);
+      }
+      for (const [kind, pattern] of Object.entries(linuxPatterns[edition])) {
+        const asset = (release.assets || []).find(item => pattern.test(item.name));
+        setLinuxLink(edition, kind, asset);
       }
     }
 
